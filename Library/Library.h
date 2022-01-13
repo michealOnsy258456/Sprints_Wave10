@@ -10,7 +10,7 @@
 #define LIBRARY_H_
 
 
-#define F_CPU 16000000
+#define F_CPU 8000000
 #ifndef  F_CPU
 #warning "you will use default F_CPU ";
 #endif
@@ -18,6 +18,7 @@
 /* AVR */
 #include "util/delay.h"
 #include "avr/interrupt.h"
+#include "atmega32.h"
 
 /* Standard Libraries */
 #include "stdlib.h"

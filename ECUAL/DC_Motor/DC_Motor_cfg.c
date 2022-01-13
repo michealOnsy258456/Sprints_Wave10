@@ -19,14 +19,17 @@
 
 MTR_CFG_t  Arr_ST_Mtr_cfg  [Mtr_End] = 
 {    
-	{{MTR_1_EN_PORT, MTR_1_EN},
-	 {MTR_1_H1_PORT, MTR_1_H1},
+	{{MTR_1_H1_PORT, MTR_1_H1},
 	 {MTR_1_H2_PORT, MTR_1_H2}},
 	 
-	{{MTR_2_EN_PORT, MTR_2_EN},
-	 {MTR_2_H1_PORT, MTR_2_H1},
+	{{MTR_2_H1_PORT, MTR_2_H1},
 	 {MTR_2_H2_PORT, MTR_2_H2}}
 }; 
+
+PWM_ID   MTR_PWM_CFG    [Mtr_End] = 
+{
+	MTR_1_PWM , MTR_2_PWM
+};
 
 /**************************************************************************************************
 * End of file

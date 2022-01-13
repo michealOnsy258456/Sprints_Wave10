@@ -11,16 +11,7 @@
 /**************************************************************************************************
 * Local data types
 ***************************************************************************************************/
-#include "SoftwarePWM.h" 
 #include "DC_Motor_cfg.h"
-
-typedef enum
-{
-	Mtr_Start,
-	Motor1 = Mtr_Start,
-	Motor2,
-	Mtr_End
-}Motor_t;
 
 
 typedef enum 
@@ -39,10 +30,8 @@ typedef enum
 * Extern Functions
 ***************************************************************************************************/
 
-void             		MOTOR_INIT		(Motor_t   num ,STR_PWM_config_t * configurations);
-MOTOR_ERROR_state 		MOTOR_Start		(Motor_t   num ,STR_PWM_config_t * configurations);
-MOTOR_ERROR_state 		MOTOR_CW        (Motor_t   num ,STR_PWM_config_t * configurations);
-MOTOR_ERROR_state 		MOTOR_ACW       (Motor_t   num ,STR_PWM_config_t * configurations);
+void             		MOTOR_INIT		(Motor_t   num);
+MOTOR_ERROR_state 		MOTOR_Direction (Motor_t   num , MTR_Direction_t Direction, uint8_t Duty);
 MOTOR_ERROR_state 		MOTOR_Stop      (Motor_t   num);
 
 

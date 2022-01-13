@@ -14,12 +14,15 @@
 #include "DIO.h"
 #include "DC_Motor_cfg.h"
 #include "Library.h"
+#include "PWM.h" 
 
 /**************************************************************************************************
 * Extern variables
 ***************************************************************************************************/
 extern MTR_CFG_t  Arr_ST_Mtr_cfg  [Mtr_End];
+extern PWM_ID   MTR_PWM_CFG    [Mtr_End];
 
+static MOTOR_ERROR_state 		MOTOR_Start		(Motor_t   num , uint8_t Duty);
 /**************************************************************************************************
 * Incomplete data types
 ***************************************************************************************************/
@@ -50,13 +53,9 @@ static MTR_State_t       Motor_State     [Mtr_End] = {Motor_Off, Motor_Off};
 * MOTOR_INIT
 ***************************************************************************************************/
 
-void	MOTOR_INIT     (Motor_t   num ,STR_PWM_config_t * configurations)
+void	MOTOR_INIT     (Motor_t   num)
 {
-	/* Speed Pin */
-	/* set as output */
-	DIO_setPinDirection(Arr_ST_Mtr_cfg[num][MOTOR_EN].PORT, Arr_ST_Mtr_cfg[num][MOTOR_EN].num_pin, DIO_u8_OUTPUT);
-	/* default value is off */
-	DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_EN].PORT, Arr_ST_Mtr_cfg[num][MOTOR_EN].num_pin, DIO_u8_LOW);
+	PWM_Init(MTR_PWM_CFG[num], MTR_Frequency);
 		
 	/* H1 Pin */
 	/* set as output */
@@ -69,20 +68,11 @@ void	MOTOR_INIT     (Motor_t   num ,STR_PWM_config_t * configurations)
 	DIO_setPinDirection(Arr_ST_Mtr_cfg[num][MOTOR_H2].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H2].num_pin, DIO_u8_OUTPUT);
 	/* default value is off */
 	DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H2].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H2].num_pin, DIO_u8_LOW);
-		
-		
-	PWM_INIT (configurations);
-	SET_PWM_DutyCycle (configurations);
-	//PWM_START(configurations);
-
+	
 	Motor_State [num] = Motor_Off;	
 }
 
-/**************************************************************************************************
-* MOTOR_CW
-***************************************************************************************************/
-
-MOTOR_ERROR_state 		MOTOR_CW      (Motor_t   num ,STR_PWM_config_t * configurations)
+MOTOR_ERROR_state 		MOTOR_Direction (Motor_t   num , MTR_Direction_t Direction, uint8_t Duty)
 {
 	MOTOR_ERROR_state   return_value   = Valid_MTR_init;
 	/* check if num is in correct range */
@@ -94,46 +84,20 @@ MOTOR_ERROR_state 		MOTOR_CW      (Motor_t   num ,STR_PWM_config_t * configurati
 	{
 		/* 1. stop the motor */
 		MOTOR_Stop (num);
-			
+		
 		/* 2. store the state for the next restart */
-		Motor_Direction[num] = Motor_CW;
-			
+		Motor_Direction[num] = Direction;
+		
 		/* 3. stop the motor */
-		MOTOR_Start (num , configurations);
+		MOTOR_Start (num , Duty);
 	}
 	return return_value;
 }
-
-/**************************************************************************************************
-* MOTOR_ACW
-***************************************************************************************************/
-
-MOTOR_ERROR_state 		MOTOR_ACW      (Motor_t   num ,STR_PWM_config_t * configurations)
-{
-	MOTOR_ERROR_state   return_value   = Valid_MTR_init;
-	/* check if num is in correct range */
-	if((num < Mtr_Start) || (num > Mtr_End))
-	{
-		return_value   = Invalid_MTR_Num;
-	}
-	else
-	{
-		/* 1. stop the motor */
-		MOTOR_Stop (num);
-			
-		/* 2. store the state for the next restart */
-		Motor_Direction[num] = Motor_ACW;
-			
-		/* 3. stop the motor */
-		MOTOR_Start (num , configurations);
-	}
-	return return_value;
-}
-
 
 /**************************************************************************************************
 * MOTOR_Stop
 ***************************************************************************************************/
+
 
 MOTOR_ERROR_state 		MOTOR_Stop       (Motor_t   num )
 {
@@ -146,7 +110,8 @@ MOTOR_ERROR_state 		MOTOR_Stop       (Motor_t   num )
 	else
 	{
 		/* 2. start the motor! */
-		DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_EN].PORT, Arr_ST_Mtr_cfg[num][MOTOR_EN].num_pin, DIO_u8_LOW);
+		PWM_Stop(MTR_PWM_CFG[num]);
+		//SET_PWM_DutyCycle(num, 0);
 		DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H1].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H1].num_pin, DIO_u8_LOW);
 		DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H2].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H2].num_pin, DIO_u8_LOW);
 			
@@ -157,14 +122,10 @@ MOTOR_ERROR_state 		MOTOR_Stop       (Motor_t   num )
 }
 
 /**************************************************************************************************
-* implimentaion of static functions
-***************************************************************************************************/
-
-/**************************************************************************************************
 * MOTOR_Start
 ***************************************************************************************************/
 
-MOTOR_ERROR_state 		MOTOR_Start (Motor_t   num ,STR_PWM_config_t * configurations)
+static MOTOR_ERROR_state 		MOTOR_Start (Motor_t   num , uint8_t Duty)
 {
 	MOTOR_ERROR_state   return_value   = Valid_MTR_init;
 	/* check if num is in correct range */
@@ -174,28 +135,21 @@ MOTOR_ERROR_state 		MOTOR_Start (Motor_t   num ,STR_PWM_config_t * configuration
 	}
 	else
 	{
-		/* 1. Make sure Motor is Stopped */
-		//DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_EN].PORT, Arr_ST_Mtr_cfg[num][MOTOR_EN].num_pin, DIO_u8_LOW);
-			
-		/* 2. select direction from previous state */
-		if(Motor_Direction[num] == Motor_CW)
+		if(Motor_State[num] == Motor_Off)
 		{
-			DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H2].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H2].num_pin, DIO_u8_LOW);
-			DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H1].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H1].num_pin, DIO_u8_HIGH);
+			if(Motor_Direction[num] == Motor_CW)
+			{
+				DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H2].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H2].num_pin, DIO_u8_LOW);
+				DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H1].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H1].num_pin, DIO_u8_HIGH);
+			}
+			else
+			{
+				DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H1].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H1].num_pin, DIO_u8_LOW);
+				DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H2].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H2].num_pin, DIO_u8_HIGH);
+			}
+			Motor_State[num] = Motor_On;
+			SET_PWM_DutyCycle(MTR_PWM_CFG[num], Duty);	
 		}
-		else
-		{
-			DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H1].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H1].num_pin, DIO_u8_LOW);
-			DIO_writePinValue(Arr_ST_Mtr_cfg[num][MOTOR_H2].PORT, Arr_ST_Mtr_cfg[num][MOTOR_H2].num_pin, DIO_u8_HIGH);
-		}
-			
-		//configurations->PWMCh.PortNum = Arr_ST_Mtr_cfg[num][MOTOR_EN].PORT ;
-		//configurations->PWMCh.PinNum = Arr_ST_Mtr_cfg[num][MOTOR_EN].num_pin ;
-			
-		SET_PWM_DutyCycle(configurations);
-		PWM_START(configurations);
-		
-		Motor_State[num] = Motor_On;
 	}
 	return return_value;
 }

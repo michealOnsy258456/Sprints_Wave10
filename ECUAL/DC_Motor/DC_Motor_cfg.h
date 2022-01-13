@@ -13,7 +13,7 @@
 ***************************************************************************************************/
 #include "Library.h"
 #include "DIO.h"
-
+#include "PWM.h" 
 
 /**************************************************************************************************
 * File Configurations
@@ -25,14 +25,14 @@
 */
 
 /* Control Pins */
-#define MOTOR_EN            0
-#define MOTOR_H1            1
-#define MOTOR_H2            2
-#define MOTOR_CONTROL_PINS   3
+#define MOTOR_H1            0
+#define MOTOR_H2            1
+#define MOTOR_CONTROL_PINS  2
+
+#define MTR_Frequency       1000UL
 
 /* Motor 1 */
-#define MTR_1_EN_PORT       PORTd
-#define MTR_1_EN            PIN4
+#define MTR_1_PWM          PWM_0
 
 #define MTR_1_H1_PORT    	PORTd
 #define MTR_1_H1         	PIN2
@@ -41,8 +41,7 @@
 #define MTR_1_H2         	PIN6
 
 /* Motor 2 */
-#define MTR_2_EN_PORT  	    PORTd
-#define MTR_2_EN       	    PIN5
+#define MTR_2_PWM          PWM_1
 
 #define MTR_2_H1_PORT    	PORTd
 #define MTR_2_H1         	PIN3
@@ -54,6 +53,20 @@
 /**************************************************************************************************
 * User data type
 ***************************************************************************************************/
+
+typedef enum
+{
+	Mtr_Start,
+	Motor1 = Mtr_Start,
+	Motor2,
+	Mtr_End
+}Motor_t;
+
+typedef enum
+{
+	MTR_DIR_CW,
+	MTR_DIR_ACW
+}MTR_Direction_t;
 
 typedef struct
 {

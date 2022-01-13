@@ -1,95 +1,128 @@
 #include "App.h"
 
-static STR_PWM_config_t     configurations[Mtr_End] = {0};
-static Car_StateMachine_t   CAR          = CAR_EN_Stop;
+static Car_StateMachine_t   CAR          = CAR_EN_Init;
 static Car_StateMachine_t   CAR_Gear     = CAR_EN_Stop;
-static uint8_t              speed    [4] = {0, 30, 60, 90};
+static uint8_t              speed    [3] = {30, 60, 90};
 
-static void  APP_Apply(void);
+static void Move_Update(void);
+static void GEAR_Update(void);
+static void APP_Apply(void);
 
 void App_Init(void)
 {
-	configurations[Motor1].DutyCycle		= 0;
-	configurations[Motor1].TIMInstance		= TIMER_0;
-	configurations[Motor1].Freq				= 0x03;
-	configurations[Motor1].PWMCh.PortNum	= MTR_1_EN_PORT;
-	configurations[Motor1].PWMCh.PinNum		= MTR_1_EN;
-	
-	configurations[Motor2].DutyCycle		= 0;
-	configurations[Motor2].TIMInstance		= TIMER_2;
-	configurations[Motor2].Freq				= 0x03;
-	configurations[Motor2].PWMCh.PortNum	= MTR_2_EN_PORT;
-	configurations[Motor2].PWMCh.PinNum		= MTR_2_EN;
-	
 	BUTTON_init();
-	MOTOR_INIT(Motor1 , &configurations[Motor1] );
-	MOTOR_INIT(Motor2 , &configurations[Motor2] );	
+	MOTOR_INIT(Motor1);
+	MOTOR_INIT(Motor2);	
 }
 
 void App_Update(void)
+{
+	GEAR_Update();
+	Move_Update();
+	APP_Apply();
+}
+
+static void GEAR_Update(void)
 {  
 	BTN_State_t  BTN_value = BTN_LOW;
-	switch (CAR_Gear)
+	BUTTON_READ (BUTTON_GEAR, &BTN_value);	
+	if(BTN_value == BTN_HIGH)
 	{
-		case CAR_EN_Stop:
+		do 
 		{
-			//check transfer conditions
 			BUTTON_READ (BUTTON_GEAR, &BTN_value);
-			if(BTN_value == BTN_HIGH)
+		} while(BTN_value == BTN_HIGH);
+		
+		switch (CAR_Gear)
+		{
+			case CAR_EN_Stop:
 			{
+				PORTB &= 0x0F;
+				PORTB |= 0x10;
 				CAR_Gear = CAR_EN_F_30;
-			}
-			else{/*MISRA C*/}
-		}break;
-		case CAR_EN_F_30:
-		{
-			//check transfer conditions
-			BUTTON_READ (BUTTON_GEAR, &BTN_value);
-			if(BTN_value == BTN_HIGH)
+			}break;
+			case CAR_EN_F_30:
 			{
+				PORTB &= 0x0F;
+				PORTB |= 0x20;
 				CAR_Gear = CAR_EN_F_60;
-			}
-			else{/*MISRA C*/}
-		}break;
-		case CAR_EN_F_60:
-		{
-			//check transfer conditions
-			BUTTON_READ (BUTTON_GEAR, &BTN_value);
-			if(BTN_value == BTN_HIGH)
+			}break;
+			case CAR_EN_F_60:
 			{
+				PORTB &= 0x0F;
+				PORTB |= 0x40;
 				CAR_Gear = CAR_EN_F_90;
-			}
-			else{/*MISRA C*/}
 			
-		}break;
-		case CAR_EN_F_90:
-		{
-			//check transfer conditions
-			BUTTON_READ (BUTTON_GEAR, &BTN_value);
-			if(BTN_value == BTN_HIGH)
+			}break;
+			case CAR_EN_F_90:
 			{
-				CAR_Gear = CAR_EN_B_30;
+				PORTB &= 0x0F;
+				PORTB |= 0x80;
+				CAR_Gear = CAR_EN_BACK;
+			}break;
+			case CAR_EN_BACK:
+			{
+				CAR_Gear = CAR_EN_F_30;					
+			}break;
+			default:{/*MISRA C*/}break;
+		}		
+	}
+	else{/*MISRA C*/}	
+}
+void Move_Update(void)
+{  
+	BTN_State_t  BTN_value = BTN_LOW;
+	switch(CAR)
+	{
+		case CAR_EN_Init:
+		{
+			if(CAR_Gear == CAR_EN_F_30)
+			{
+				CAR = CAR_EN_Stop;
 			}
-			else{/*MISRA C*/}
-		}break;
+		else{/*MISRA C*/}
+		}break;	
 		case CAR_EN_B_30:
 		{
 			//check transfer conditions
-			BUTTON_READ (BUTTON_GEAR, &BTN_value);
+			BUTTON_READ (BUTTON_MOVE, &BTN_value);
 			if(BTN_value == BTN_HIGH)
 			{
-				CAR_Gear = CAR_EN_F_30;
+				CAR = CAR_EN_B_30;
 			}
-			else{/*MISRA C*/}					
+			else
+			{
+				CAR = CAR_EN_Stop;
+			}
 		}break;
-		default:{/*MISRA C*/}
-	}
-	switch(CAR)
-	{	
+		case CAR_EN_B_R_30:
+		{
+			//check transfer conditions
+			BUTTON_READ (BUTTON_RIGHT, &BTN_value);
+			if(BTN_value == BTN_HIGH)
+			{
+				CAR = CAR_EN_B_R_30;
+			}
+			else
+			{
+				CAR = CAR_EN_Stop;
+			}
+		}break;
+		case CAR_EN_B_L_30:
+		{
+			//check transfer conditions
+			BUTTON_READ (BUTTON_LEFT, &BTN_value);
+			if(BTN_value == BTN_HIGH)
+			{
+				CAR = CAR_EN_B_L_30;
+			}
+			else
+			{
+				CAR = CAR_EN_Stop;
+			}
+		}break;
 		case CAR_EN_Move:
 		{
-			//action of Motors
-			APP_Apply();
 			//check transfer conditions
 			BUTTON_READ (BUTTON_MOVE, &BTN_value);
 			if(BTN_value == BTN_HIGH)
@@ -103,8 +136,6 @@ void App_Update(void)
 		}break;
 		case CAR_EN_Right:
 		{
-			//action of Motors
-			APP_Apply();
 			//check transfer conditions
 			BUTTON_READ (BUTTON_RIGHT, &BTN_value);
 			if(BTN_value == BTN_HIGH)
@@ -118,13 +149,11 @@ void App_Update(void)
 		}break;
 		case CAR_EN_Left:
 		{
-			//action of Motors
-			APP_Apply();
 			//check transfer conditions
 			BUTTON_READ (BUTTON_LEFT, &BTN_value);
 			if(BTN_value == BTN_HIGH)
 			{
-				CAR = BUTTON_LEFT;
+				CAR = CAR_EN_Left;
 			}
 			else
 			{
@@ -133,97 +162,126 @@ void App_Update(void)
 		}break;
 		case CAR_EN_Stop :
 		{
-			
-			//priority 1
-			//check transfer conditions
-			BUTTON_READ (BUTTON_MOVE, &BTN_value);
-			if(BTN_value == BTN_HIGH)
+			if(CAR_Gear == CAR_EN_BACK)
 			{
-				CAR = CAR_EN_Move;
-			}
-			else
-			{
-				//priority 2
+				//priority 1
 				//check transfer conditions
-				BUTTON_READ (BUTTON_RIGHT, &BTN_value);
+				BUTTON_READ (BUTTON_MOVE, &BTN_value);
 				if(BTN_value == BTN_HIGH)
 				{
-					CAR = CAR_EN_Right;
+					CAR = CAR_EN_B_30;
 				}
 				else
 				{
-					//priority 3
+					//priority 2
 					//check transfer conditions
-					BUTTON_READ (BUTTON_LEFT, &BTN_value);
+					BUTTON_READ (BUTTON_RIGHT, &BTN_value);
 					if(BTN_value == BTN_HIGH)
 					{
-						CAR = CAR_EN_Left;
+						CAR = CAR_EN_B_R_30;
 					}
 					else
 					{
-						CAR = CAR_EN_Stop;
+						//priority 3
+						//check transfer conditions
+						BUTTON_READ (BUTTON_LEFT, &BTN_value);
+						if(BTN_value == BTN_HIGH)
+						{
+							CAR = CAR_EN_B_L_30;
+						}
+						else
+						{
+							CAR = CAR_EN_Stop;
+						}
 					}
 				}
 			}
-			//action of Motors
-			APP_Apply();
-		}
-		default:{break;}
+			else
+			{
+				//priority 1
+				//check transfer conditions
+				BUTTON_READ (BUTTON_MOVE, &BTN_value);
+				if(BTN_value == BTN_HIGH)
+				{
+					CAR = CAR_EN_Move;
+				}
+				else
+				{
+					//priority 2
+					//check transfer conditions
+					BUTTON_READ (BUTTON_RIGHT, &BTN_value);
+					if(BTN_value == BTN_HIGH)
+					{
+						CAR = CAR_EN_Right;
+					}
+					else
+					{
+						//priority 3
+						//check transfer conditions
+						BUTTON_READ (BUTTON_LEFT, &BTN_value);
+						if(BTN_value == BTN_HIGH)
+						{
+							CAR = CAR_EN_Left;
+						}
+						else
+						{
+							CAR = CAR_EN_Stop;
+						}
+					}
+				}
+			}			
+		}break;
+		default:{/*MISRA C*/}break;
 	}	
 }
 
+
 static void  APP_Apply(void)
 {
-	Car_StateMachine_t   CAR_Gear_Previous = CAR_Gear;
-	if(CAR_Gear == CAR_EN_B_30)
-	{
-		CAR_Gear = 1;//speed [1] = 30; but backword direction
-	}
-	else{/*MISRA C*/}
-	configurations[Motor1].DutyCycle =  speed[CAR_Gear];
-	configurations[Motor2].DutyCycle =  speed[CAR_Gear];
 	switch (CAR)
 	{
 		case CAR_EN_Stop:
 		{
-			configurations[Motor1].DutyCycle =  0;
+			PORTA = 0x00;
 			MOTOR_Stop(Motor1);
-			MOTOR_Start(Motor1, &configurations[Motor1]);
-			
-			configurations[Motor2].DutyCycle =  0;
 			MOTOR_Stop(Motor2);
-			MOTOR_Start(Motor2, &configurations[Motor2]);
 		}break;
 		case CAR_EN_Move:
 		{
-			MOTOR_CW(Motor1 ,&configurations[Motor1]);
-			MOTOR_CW(Motor2 ,&configurations[Motor2]);
+			PORTA = 0x01;
+			MOTOR_Direction(Motor1, MTR_DIR_CW, speed[CAR_Gear]);
+			MOTOR_Direction(Motor2, MTR_DIR_CW, speed[CAR_Gear]);
 		}break;
 		case CAR_EN_Right:
 		{
-			configurations[Motor2].DutyCycle =  0;
-			MOTOR_Stop(Motor2);
-			MOTOR_Start(Motor2, &configurations[Motor2]);
-			
-			MOTOR_CW(Motor1 ,&configurations[Motor1]);
+			PORTA = 0x02;
+			MOTOR_Stop(Motor2);	
+			MOTOR_Direction(Motor1, MTR_DIR_CW, speed[CAR_Gear]);	
 		}break;
 		case CAR_EN_Left:
 		{
-			configurations[Motor1].DutyCycle =  0;
+			PORTA = 0x04;
 			MOTOR_Stop(Motor1);
-			MOTOR_Start(Motor1, &configurations[Motor1]);
-			
-			MOTOR_CW(Motor2 ,&configurations[Motor2]);
+			MOTOR_Direction(Motor2, MTR_DIR_CW, speed[CAR_Gear]);
 		}break;
-		default:
+		case CAR_EN_B_30:
 		{
-			if(CAR_Gear_Previous == CAR_EN_B_30)
-			{
-				MOTOR_ACW(Motor1 ,&configurations[Motor1]);
-				MOTOR_ACW(Motor2 ,&configurations[Motor2]);
-			}
-			else{/*MISRA C*/}
+			PORTA = 0x08;
+			MOTOR_Direction(Motor1, MTR_DIR_ACW, 30);
+			MOTOR_Direction(Motor2, MTR_DIR_ACW, 30);
 		}break;
+		case CAR_EN_B_R_30:
+		{
+			PORTA = 0x02;
+			MOTOR_Stop(Motor1);
+			MOTOR_Direction(Motor2, MTR_DIR_ACW, 30);
+		}break;
+		case CAR_EN_B_L_30:
+		{
+			PORTA = 0x04;
+			MOTOR_Stop(Motor2);
+			MOTOR_Direction(Motor1, MTR_DIR_ACW, 30);
+		}break;
+		default:{/*MISRA C*/}break;
 	}
-	CAR_Gear = CAR_Gear_Previous;
 }
