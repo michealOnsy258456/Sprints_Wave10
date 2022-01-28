@@ -1,0 +1,106 @@
+ /******************************************************************************
+ *
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
+/*******************************************************************************
+ *                            Includes                                         *
+ *******************************************************************************/
+#include "App.h"
+
+/*******************************************************************************
+ *                            LOCAL FUNCTIONS PROTOTYPE                        *
+ *******************************************************************************/
+static uint8_t ConvertCh_Dec(uint8_t * STRING_1, uint8_t *Address) ;
+
+/*******************************************************************************
+ *                              LOCAL MACROS                                   *
+ *******************************************************************************/
+#define ADDRESS_SIZE 8
+/*******************************************************************************
+ *                              Global Variables                               *
+ *******************************************************************************/
+
+uint8_t gStr8_message[10];	/* Global string to be sent and received through the uart */
+uint8_t gStr8_address[10];	/* Global string to be store the value of the address */
+uint8_t gu8_WriteData;		/* Global variable to store the value of written data on it */
+uint8_t gu8_ReadData;		/* Global variable to store the value of read data on it */
+
+/*******************************************************************************
+ *                           APIs IMPLEMENTATION                                *
+ *******************************************************************************/
+void App_init(void)
+{
+	UART_Config config={UART_1StopBit,UART_8Bit,UART_AsyncDouble,UART_Disable};
+	UART_VidInit(&config,9600); // initialize UART driver
+
+	EEPROM_init();	/* Initialize the external EEPROM */
+}
+
+
+void App_Update(void)
+{
+    uint8_t au8_WriteAddr = 0;
+
+	UART_receiveString(gStr8_message);		/* Receive string from terminal */
+
+	/* Check if the message is write or read */
+	if(strcmp(gStr8_message, "WRITE") == IDENTICAL)
+	{
+		UART_receiveString(gStr8_address);	/* Receive address from terminal */
+		ConvertCh_Dec(gStr8_address, &au8_WriteAddr);
+		UART_sendString("OK\r");				/* Receive acknowledge from terminal */
+		gu8_WriteData = UART_recieveByte();		/* Receive data from terminal */
+
+		EEPROM_writeByte(au8_WriteAddr, gu8_WriteData);	/* Write data in the external EEPROM */
+		UART_sendString("\rOK\r\r");
+	}
+	else if(strcmp(gStr8_message, "READ") == IDENTICAL)
+	{
+		UART_receiveString(gStr8_address);	/* Receive string from terminal */
+		ConvertCh_Dec(gStr8_address, &au8_WriteAddr);
+
+		UART_sendString("OK\r");				/* Receive acknowledge from terminal */
+		EEPROM_readByte(au8_WriteAddr, &gu8_ReadData);	/* Read data in the external EEPROM */
+
+		UART_sendString("The data stored is ");
+		UART_sendByte(gu8_ReadData);
+		UART_sendString("\r\r");
+	}
+}
+
+
+
+/*CONVERTS THE ADDRESS FROM CHARACTERS TO DECIMAL NUMBER*/
+static uint8_t ConvertCh_Dec(ptr_uint8_t STRING_1, ptr_uint8_t Address) {
+	uint8_t lu8_counter = 0;
+	uint8_t lu8_counter2 = 0;
+	*Address=0;
+	while (STRING_1[lu8_counter] != NULL_TERMINATOR) {
+		if ((STRING_1[lu8_counter] != '0') && (STRING_1[lu8_counter] != '1')) {
+			return 2;
+		} else {
+			STRING_1[lu8_counter] = gStr8_address[lu8_counter] - '0';
+			lu8_counter++;
+		}
+	}
+	lu8_counter = lu8_counter - 1;
+	if (lu8_counter != ADDRESS_SIZE) {
+		return 1;
+	} else {
+	}
+	while (lu8_counter2 != 8) {
+		*Address |= (STRING_1[lu8_counter] << lu8_counter2);
+		STRING_1[lu8_counter] = '\0';
+		lu8_counter--;
+		lu8_counter2++;
+	}
+	return 0;
+
+}
