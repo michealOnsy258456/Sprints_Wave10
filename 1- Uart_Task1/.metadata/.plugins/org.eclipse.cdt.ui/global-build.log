@@ -1,0 +1,76 @@
+06:33:27 **** Clean-only build of configuration Debug for project UART ****
+make clean 
+rm -rf  ./MCAL/UART/UART.o  ./APP/APP.o  ./main.o  sizedummy  UART.lss  ./MCAL/UART/UART.d  ./APP/APP.d  ./main.d  UART.elf
+ 
+06:34:06 **** Build of configuration Debug for project UART ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\HAL" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:10,
+                 from ../MCAL/UART/UART.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:10,
+                 from ../MCAL/UART/UART.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\HAL" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\MCAL\UART/UART.h:10,
+                 from ../APP/APP.h:11,
+                 from ../APP/APP.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\MCAL\UART/UART.h:10,
+                 from ../APP/APP.h:11,
+                 from ../APP/APP.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\HAL" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\MCAL\UART/UART.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\APP/APP.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\MCAL\UART/UART.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\1- Uart_Task1\UART\APP/APP.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: UART.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,UART.map -mmcu=atmega32 -o "UART.elf"  ./MCAL/UART/UART.o  ./APP/APP.o  ./main.o   
+Finished building target: UART.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S UART.elf  >"UART.lss"
+Finished building: UART.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4454 bytes (13.6% Full)
+(.text + .data + .bootloader)
+
+Data:        284 bytes (13.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
