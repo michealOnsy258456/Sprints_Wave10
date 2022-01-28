@@ -1,0 +1,55 @@
+/*
+ * SPI.c
+ *
+ *  Created on: Jan 24, 2022
+ *      Author: Micheal-Onsy
+ */
+
+
+
+#include "SPI.h"
+#include <avr/io.h>
+void SPI_InitMaster()
+{
+	DDRB |= (1<<PB4)|(1<<PB5)|(1<<PB7);
+	SPCR |= (1<<SPE)|(1<<MSTR);
+}
+
+void SPI_InitSlave()
+{
+	DDRB |= (1<<PB6);
+	SPCR |= (1<<SPE);
+}
+
+void SPI_SendByte(uint8_t data)
+{
+	SPDR = data;
+	while(Bit_Is_Clear(SPSR,SPIF));
+}
+
+uint8_t SPI_ReceiveByte()
+{
+	while(BIT_IS_CLEAR(SPSR,SPIF));
+	return SPDR;
+}
+
+void SPI_SendString(uint8_t *str)
+{
+	while(*str)
+	{
+		SPI_SendByte(*str);
+		str++;
+	}
+}
+
+void SPI_ReceiveString(uint8_t *str)
+{
+	uint8_t i = 0;
+	str[i] = SPI_ReceiveByte();
+	while(str[i] != '#')
+	{
+		i++;
+		str[i] = SPI_ReceiveByte();
+	}
+	str[i] = '\0';
+}

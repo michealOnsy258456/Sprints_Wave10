@@ -1,0 +1,30 @@
+/*
+ * SPI.h
+ *
+ *  Created on: Jan 24, 2022
+ *      Author: Micheal-Onsy
+ */
+
+#ifndef MCAL_SPI_SPI_H_
+#define MCAL_SPI_SPI_H_
+
+
+#include "Std_type.h"
+#include "common_macros.h"
+#include "Register.h"
+#include "DIO.h"
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+void SPI_InitMaster();
+void SPI_SendByte(uint8 data)
+;
+void SPI_SendString(uint8_t *str)
+;
+uint8_t SPI_ReceiveByte()
+;
+void SPI_SendString(const uint8_t *Str);
+void SPI_ReceiveString(uint8_t *Str);
+
+
+#endif /* MCAL_SPI_SPI_H_ */
