@@ -1,0 +1,200 @@
+06:43:00 **** Clean-only build of configuration Debug for project Traffic_Light ****
+make clean 
+rm -rf  ./MCAL/UART/UART.o  ./MCAL/DIO/DIO.o  ./HAL/LED/LED.o  ./APP/APP.o  ./main.o  sizedummy  Traffic_Light.lss  ./MCAL/UART/UART.d  ./MCAL/DIO/DIO.d  ./HAL/LED/LED.d  ./APP/APP.d  ./main.d  Traffic_Light.elf
+ 
+06:43:22 **** Build of configuration Debug for project Traffic_Light ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:10,
+                 from ../MCAL/UART/UART.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:10,
+                 from ../MCAL/UART/UART.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from ../MCAL/DIO/DIO.h:13,
+                 from ../MCAL/DIO/DIO.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from ../MCAL/DIO/DIO.h:13,
+                 from ../MCAL/DIO/DIO.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/DIO/DIO.c
+ 
+Building file: ../HAL/LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/LED/LED.d" -MT"HAL/LED/LED.o" -c -o "HAL/LED/LED.o" "../HAL/LED/LED.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO/DIO.h:13,
+                 from ../HAL/LED/LED.h:13,
+                 from ../HAL/LED/LED.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO/DIO.h:13,
+                 from ../HAL/LED/LED.h:13,
+                 from ../HAL/LED/LED.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/LED/LED.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
+                 from ../APP/APP.h:11,
+                 from ../APP/APP.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
+                 from ../APP/APP.h:11,
+                 from ../APP/APP.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/APP.c: In function 'AppUpdate':
+../APP/APP.c:33: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:37: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:42: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:46: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:56: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:63: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:70: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:76: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:81: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP/APP.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP/APP.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: Traffic_Light.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Traffic_Light.map -mmcu=atmega32 -o "Traffic_Light.elf"  ./MCAL/UART/UART.o  ./MCAL/DIO/DIO.o  ./HAL/LED/LED.o  ./APP/APP.o  ./main.o   
+Finished building target: Traffic_Light.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Traffic_Light.elf  >"Traffic_Light.lss"
+Finished building: Traffic_Light.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Traffic_Light.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8280 bytes (25.3% Full)
+(.text + .data + .bootloader)
+
+Data:        348 bytes (17.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:44:53 **** Incremental Build of configuration Debug for project Traffic_Light ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP/APP.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP/APP.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: Traffic_Light.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Traffic_Light.map -mmcu=atmega32 -o "Traffic_Light.elf"  ./MCAL/UART/UART.o  ./MCAL/DIO/DIO.o  ./HAL/LED/LED.o  ./APP/APP.o  ./main.o   
+Finished building target: Traffic_Light.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Traffic_Light.elf  >"Traffic_Light.lss"
+Finished building: Traffic_Light.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Traffic_Light.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8280 bytes (25.3% Full)
+(.text + .data + .bootloader)
+
+Data:        348 bytes (17.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+06:45:28 **** Incremental Build of configuration Debug for project Traffic_Light ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP/APP.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP/APP.h:11,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: Traffic_Light.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Traffic_Light.map -mmcu=atmega32 -o "Traffic_Light.elf"  ./MCAL/UART/UART.o  ./MCAL/DIO/DIO.o  ./HAL/LED/LED.o  ./APP/APP.o  ./main.o   
+Finished building target: Traffic_Light.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Traffic_Light.elf  >"Traffic_Light.lss"
+Finished building: Traffic_Light.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Traffic_Light.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8280 bytes (25.3% Full)
+(.text + .data + .bootloader)
+
+Data:        348 bytes (17.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
