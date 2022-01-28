@@ -1,0 +1,103 @@
+08:04:16 **** Build of configuration Debug for project MC1_EX1 ****
+make all 
+Building file: ../MCAL/I2C/i2c.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\GLOBAL_INTERRUPT" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/I2C/i2c.d" -MT"MCAL/I2C/i2c.o" -c -o "MCAL/I2C/i2c.o" "../MCAL/I2C/i2c.c"
+In file included from ../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../MCAL/I2C/i2c.h:18,
+                 from ../MCAL/I2C/i2c.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../MCAL/I2C/i2c.h:18,
+                 from ../MCAL/I2C/i2c.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/I2C/i2c.c
+ 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\GLOBAL_INTERRUPT" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY/Std_type.h:11,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY/Std_type.h:11,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+ 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\GLOBAL_INTERRUPT" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:22,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:22,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/DIO/DIO.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\GLOBAL_INTERRUPT" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C/../../Library/Std_type.h:11,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C/i2c.h:18,
+                 from ../APP/APP.h:12,
+                 from ../APP/APP.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C/../../Library/Std_type.h:11,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C/i2c.h:18,
+                 from ../APP/APP.h:12,
+                 from ../APP/APP.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\GLOBAL_INTERRUPT" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C/../../Library/Std_type.h:11,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C/i2c.h:18,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\APP/APP.h:12,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C/../../Library/Std_type.h:11,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\MCAL\I2C/i2c.h:18,
+                 from C:\Users\Micheal-Onsy\Desktop\delivery\5- I2C_Task1\MC1_EX1\APP/APP.h:12,
+                 from ../main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: MC1_EX1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1_EX1.map -mmcu=atmega32 -o "MC1_EX1.elf"  ./MCAL/I2C/i2c.o  ./MCAL/GLOBAL_INTERRUPT/globalInterrupt.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+Finished building target: MC1_EX1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1_EX1.elf  >"MC1_EX1.lss"
+Finished building: MC1_EX1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1_EX1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3678 bytes (11.2% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+08:04:19 Build Finished (took 2s.263ms)
+
