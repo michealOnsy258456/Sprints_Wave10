@@ -242,8 +242,9 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.DIO_SetPullupRes
                 0x00000a98      0x1ce ./MCAL/DIO/DIO.o
                 0x00000a98                DIO_SetPullupRes
- .text.AppInit  0x00000c66       0x2e ./APP/APP.o
-                0x00000c66                AppInit
+ .text.APP_Init
+                0x00000c66       0x2e ./APP/APP.o
+                0x00000c66                APP_Init
  .text.main     0x00000c94       0x16 ./main.o
                 0x00000c94                main
  .text.libgcc   0x00000caa        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
@@ -335,19 +336,19 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x1248
+.stab           0x00000000     0x12b4
  *(.stab)
  .stab          0x00000000      0x5b8 ./MCAL/SPI/SPI.o
  .stab          0x000005b8      0x948 ./MCAL/DIO/DIO.o
                                 0xb40 (size before relaxing)
- .stab          0x00000f00      0x1b0 ./APP/APP.o
+ .stab          0x00000f00      0x228 ./APP/APP.o
                                 0x3cc (size before relaxing)
- .stab          0x000010b0      0x198 ./main.o
+ .stab          0x00001128      0x18c ./main.o
                                 0x3c0 (size before relaxing)
 
-.stabstr        0x00000000      0xb7b
+.stabstr        0x00000000      0xcac
  *(.stabstr)
- .stabstr       0x00000000      0xb7b ./MCAL/SPI/SPI.o
+ .stabstr       0x00000000      0xcac ./MCAL/SPI/SPI.o
 
 .stab.excl
  *(.stab.excl)

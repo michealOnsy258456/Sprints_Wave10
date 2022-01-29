@@ -1,24 +1,41 @@
-/*
- * APP.c
+/******************************************************************************
  *
- *  Created on: Jan 24, 2022
- *      Author: Micheal-Onsy
- */
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                              INCLUDES                                       *
+ *******************************************************************************/
 #include "APP.h"
 
 
-/*GLOBAL VARIABLE
-----------------------------*/
+/*******************************************************************************
+ *                              Global Variables                               *
+ *******************************************************************************/
 uint8_t gu8_ReceiveData = 0;
 
 
-void AppInit(void)
+/*******************************************************************************
+ * [Function Name]: App_init
+ *
+ * [Description]: 	Function to Initialize the application
+ *
+ *******************************************************************************/
+
+void APP_Init(void)
 {
-	SPI_initSlave();
-	gu8_ReceiveData=SPI_recieveByte();
+	SPI_initSlave();//Initialize the SPI As Slave
+	gu8_ReceiveData=SPI_recieveByte();//Receive data from spi
 
 
-	DIO_setPortDirection(PORTc,DIO_u8_OUTPUT);
-	DIO_writePortValue(PORTc,gu8_ReceiveData);
+	DIO_setPortDirection(PORTc,DIO_u8_OUTPUT);//Initialize this port Output
+	DIO_writePortValue(PORTc,gu8_ReceiveData);//Write this port value
 
 }

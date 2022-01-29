@@ -1,0 +1,34 @@
+/******************************************************************************
+ *
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                              INCLUDES                                       *
+ *******************************************************************************/
+#include "APP.h"
+
+
+/*******************************************************************************
+ *                              Global Variables                               *
+ *******************************************************************************/
+uint8_t gu8_ReceiveData = 0;
+
+
+void APP_Init(void)
+{
+	SPI_initSlave();
+	gu8_ReceiveData=SPI_recieveByte();
+
+
+	DIO_setPortDirection(PORTc,DIO_u8_OUTPUT);
+	DIO_writePortValue(PORTc,gu8_ReceiveData);
+
+}

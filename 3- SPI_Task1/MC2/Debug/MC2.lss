@@ -7,9 +7,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .bss          00000001  00800060  00800060  00000d22  2**0
                   ALLOC
-  2 .stab         00001248  00000000  00000000  00000d24  2**2
+  2 .stab         000012b4  00000000  00000000  00000d24  2**2
                   CONTENTS, READONLY, DEBUGGING
-  3 .stabstr      00000b7b  00000000  00000000  00001f6c  2**0
+  3 .stabstr      00000cac  00000000  00000000  00001fd8  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -2061,29 +2061,29 @@ ERROR_STATE_t DIO_SetPullupRes(uint8_t PortID, uint8_t PinNumber)
  c62:	df 91       	pop	r29
  c64:	08 95       	ret
 
-00000c66 <AppInit>:
-----------------------------*/
-uint8_t gu8_ReceiveData = 0;
+00000c66 <APP_Init>:
+ * [Description]: 	Function to Initialize the application
+ *
+ *******************************************************************************/
 
-
-void AppInit(void)
+void APP_Init(void)
 {
  c66:	df 93       	push	r29
  c68:	cf 93       	push	r28
  c6a:	cd b7       	in	r28, 0x3d	; 61
  c6c:	de b7       	in	r29, 0x3e	; 62
-	SPI_initSlave();
+	SPI_initSlave();//Initialize the SPI As Slave
  c6e:	0e 94 65 00 	call	0xca	; 0xca <SPI_initSlave>
-	gu8_ReceiveData=SPI_recieveByte();
+	gu8_ReceiveData=SPI_recieveByte();//Receive data from spi
  c72:	0e 94 9f 00 	call	0x13e	; 0x13e <SPI_recieveByte>
  c76:	80 93 60 00 	sts	0x0060, r24
 
 
-	DIO_setPortDirection(PORTc,DIO_u8_OUTPUT);
+	DIO_setPortDirection(PORTc,DIO_u8_OUTPUT);//Initialize this port Output
  c7a:	82 e0       	ldi	r24, 0x02	; 2
  c7c:	6f ef       	ldi	r22, 0xFF	; 255
  c7e:	0e 94 1a 01 	call	0x234	; 0x234 <DIO_setPortDirection>
-	DIO_writePortValue(PORTc,gu8_ReceiveData);
+	DIO_writePortValue(PORTc,gu8_ReceiveData);//Write this port value
  c82:	90 91 60 00 	lds	r25, 0x0060
  c86:	82 e0       	ldi	r24, 0x02	; 2
  c88:	69 2f       	mov	r22, r25
@@ -2095,21 +2095,23 @@ void AppInit(void)
  c92:	08 95       	ret
 
 00000c94 <main>:
- */
-
-#include"APP.h"
-
+#include"APP/APP.h"
+/*****************************************************************************************
+ *                                MAIN FUNCTION                                          *
+ *****************************************************************************************/
 int main()
 {
  c94:	df 93       	push	r29
  c96:	cf 93       	push	r28
  c98:	cd b7       	in	r28, 0x3d	; 61
  c9a:	de b7       	in	r29, 0x3e	; 62
-	AppInit();
- c9c:	0e 94 33 06 	call	0xc66	; 0xc66 <AppInit>
+/********************************************************************************
+*                           SYSTEM INITIALIZATION                              *
+********************************************************************************/
+	APP_Init();
+ c9c:	0e 94 33 06 	call	0xc66	; 0xc66 <APP_Init>
  ca0:	80 e0       	ldi	r24, 0x00	; 0
  ca2:	90 e0       	ldi	r25, 0x00	; 0
-
 }
  ca4:	cf 91       	pop	r28
  ca6:	df 91       	pop	r29

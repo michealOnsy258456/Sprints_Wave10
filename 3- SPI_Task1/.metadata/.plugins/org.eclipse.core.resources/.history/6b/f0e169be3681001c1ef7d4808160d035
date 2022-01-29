@@ -1,0 +1,29 @@
+/******************************************************************************
+ *
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                              INCLUDES                                       *
+ *******************************************************************************/
+#include "APP.h"
+
+
+/*GLOBAL VARIABLE
+----------------------------*/
+uint8_t  gu8_SendData = 'A';
+
+
+void AppInit(void)
+{
+	SPI_initMaster();
+	_delay_ms(100); /* delay until MC2 finish its initialization task */
+	SPI_sendByte(gu8_SendData);
+}
