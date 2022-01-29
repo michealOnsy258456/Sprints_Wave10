@@ -9,27 +9,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   2 .bss          00000014  00800168  00800168  00002192  2**0
                   ALLOC
-  3 .stab         000018e4  00000000  00000000  00002194  2**2
+  3 .stab         000019f8  00000000  00000000  00002194  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      000011a7  00000000  00000000  00003a78  2**0
+  4 .stabstr      0000126e  00000000  00000000  00003b8c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_aranges 000001a0  00000000  00000000  00004c1f  2**0
+  5 .debug_aranges 000001a0  00000000  00000000  00004dfa  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_pubnames 000001f2  00000000  00000000  00004dbf  2**0
+  6 .debug_pubnames 000001f2  00000000  00000000  00004f9a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   0000240b  00000000  00000000  00004fb1  2**0
+  7 .debug_info   0000240b  00000000  00000000  0000518c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 00001386  00000000  00000000  000073bc  2**0
+  8 .debug_abbrev 00001386  00000000  00000000  00007597  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   000011d6  00000000  00000000  00008742  2**0
+  9 .debug_line   000011d6  00000000  00000000  0000891d  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_frame  000001c0  00000000  00000000  00009918  2**2
+ 10 .debug_frame  000001c0  00000000  00000000  00009af4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    000002f6  00000000  00000000  00009ad8  2**0
+ 11 .debug_str    000002f6  00000000  00000000  00009cb4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    0000096e  00000000  00000000  00009dce  2**0
+ 12 .debug_loc    0000096e  00000000  00000000  00009faa  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 00000050  00000000  00000000  0000a73c  2**0
+ 13 .debug_ranges 00000050  00000000  00000000  0000a918  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -2467,10 +2467,10 @@ UART_ERROR_state_t  UART_receiveString(uint8_t *Str)
     11ee:	08 95       	ret
 
 000011f0 <SPI_initMaster>:
-
-/*******************************************************************************
- *                      Functions Definitions                                  *
- *******************************************************************************/
+ *
+ * @return function void.
+ *
+ */
 void SPI_initMaster(void)
 {
     11f0:	df 93       	push	r29
@@ -2526,7 +2526,10 @@ void SPI_initMaster(void)
     123c:	08 95       	ret
 
 0000123e <SPI_initSlave>:
-
+ *
+ * @return function void.
+ *
+ */
 void SPI_initSlave(void)
 {
     123e:	df 93       	push	r29
@@ -2582,7 +2585,10 @@ void SPI_initSlave(void)
     128a:	08 95       	ret
 
 0000128c <SPI_sendByte>:
-
+ * @param [in]  data      -  character to be send through UART.
+ *
+ * @return function void.
+ */
 void SPI_sendByte(const uint8_t data)
 {
     128c:	df 93       	push	r29
@@ -2609,7 +2615,10 @@ void SPI_sendByte(const uint8_t data)
     12b0:	08 95       	ret
 
 000012b2 <SPI_recieveByte>:
-
+ * @param [in]  a_Data      -  character to be send through UART.
+ *
+ * @return function error state.
+ */
 uint8_t SPI_recieveByte(void)
 {
     12b2:	df 93       	push	r29
@@ -2632,7 +2641,10 @@ uint8_t SPI_recieveByte(void)
     12ce:	08 95       	ret
 
 000012d0 <SPI_sendString>:
-
+ * @param [in]  Str    -  pointer to string to send through SPI.
+ *
+ * @return function void.
+ */
 void SPI_sendString(const uint8_t *Str)
 {
     12d0:	df 93       	push	r29
@@ -2686,6 +2698,10 @@ void SPI_sendString(const uint8_t *Str)
     1320:	08 95       	ret
 
 00001322 <SPI_ReceiveString>:
+ * @param [out] Str    -  pointer to string to save the string through SPI.
+ *
+ * @return function error state.
+ */
 void SPI_ReceiveString(uint8_t *Str)
 {
     1322:	0f 93       	push	r16
@@ -2732,7 +2748,7 @@ void SPI_ReceiveString(uint8_t *Str)
     1368:	80 81       	ld	r24, Z
     136a:	88 23       	and	r24, r24
     136c:	b9 f0       	breq	.+46     	; 0x139c <SPI_ReceiveString+0x7a>
-}
+ */
 void SPI_ReceiveString(uint8_t *Str)
 {
 	uint8_t i = 0;
@@ -2778,10 +2794,10 @@ void SPI_ReceiveString(uint8_t *Str)
     13aa:	08 95       	ret
 
 000013ac <DIO_setPortDirection>:
- */
 
-#include "DIO.h"
-
+/********************************************************************
+*  API to Set Port Direction                                       *
+*  *****************************************************************/
 ERROR_STATE_t DIO_setPortDirection(uint8_t PortID, uint8_t PortDirection)
 {
     13ac:	df 93       	push	r29
@@ -2909,7 +2925,7 @@ ERROR_STATE_t DIO_setPinDirection(uint8_t PortID, uint8_t PinNumber,uint8_t PinD
 	{
 		if (DIO_u8_OUTPUT==PinDirection)
     1460:	8c 81       	ldd	r24, Y+4	; 0x04
-    1462:	81 30       	cpi	r24, 0x01	; 1
+    1462:	8f 3f       	cpi	r24, 0xFF	; 255
     1464:	09 f0       	breq	.+2      	; 0x1468 <DIO_setPinDirection+0x2c>
     1466:	72 c0       	rjmp	.+228    	; 0x154c <DIO_setPinDirection+0x110>
 		{
@@ -3220,8 +3236,9 @@ ERROR_STATE_t DIO_setPinDirection(uint8_t PortID, uint8_t PinNumber,uint8_t PinD
     165e:	08 95       	ret
 
 00001660 <DIO_writePortValue>:
-
-/* API to Write Port  Value */
+/********************************************************************
+*   API to Write Port  Value                                         *
+*  *****************************************************************/
 ERROR_STATE_t DIO_writePortValue(uint8_t PortID, uint8_t PortValue)
 {
     1660:	df 93       	push	r29
@@ -3319,8 +3336,10 @@ ERROR_STATE_t DIO_writePortValue(uint8_t PortID, uint8_t PortValue)
     16ee:	08 95       	ret
 
 000016f0 <DIO_writePinValue>:
+/********************************************************************
+*   API to Write Pin  Value                                         *
+*  *****************************************************************/
 
-/* API to Write Pin  Value */
 ERROR_STATE_t DIO_writePinValue(uint8_t PortID, uint8_t PinNumber,uint8_t PinDirection)
 {
     16f0:	df 93       	push	r29
@@ -3658,8 +3677,9 @@ ERROR_STATE_t DIO_writePinValue(uint8_t PortID, uint8_t PinNumber,uint8_t PinDir
     1912:	08 95       	ret
 
 00001914 <DIO_readPort>:
-
-/* API to Read Port  Value */
+/********************************************************************
+*   API to Read Port  Value                                        *
+*  *****************************************************************/
 ERROR_STATE_t DIO_readPort(uint8_t PortID, uint8_t* PortState)
 {
     1914:	df 93       	push	r29
@@ -3784,8 +3804,9 @@ ERROR_STATE_t DIO_readPort(uint8_t PortID, uint8_t* PortState)
     19c4:	08 95       	ret
 
 000019c6 <DIO_readPin>:
-
-/* API to Read Pin  Value */
+/********************************************************************
+*   API to Read Pin  Value                                          *
+*  *****************************************************************/
 ERROR_STATE_t DIO_readPin(uint8_t PortID, uint8_t PinNumber,uint8_t* PinState)
 {
     19c6:	df 93       	push	r29
@@ -3982,9 +4003,10 @@ ERROR_STATE_t DIO_readPin(uint8_t PortID, uint8_t PinNumber,uint8_t* PinState)
     1af8:	08 95       	ret
 
 00001afa <DIO_TogglePin>:
-/*
- * API to toggle pin
  * */
+/********************************************************************
+*   API to toggle pin                                               *
+*  *****************************************************************/
 ERROR_STATE_t DIO_TogglePin(uint8_t PortID, uint8_t PinNumber)
 {
     1afa:	df 93       	push	r29
@@ -4158,6 +4180,10 @@ ERROR_STATE_t DIO_TogglePin(uint8_t PortID, uint8_t PinNumber)
     1c0e:	08 95       	ret
 
 00001c10 <DIO_SetPullupRes>:
+
+/********************************************************************
+*   API to PullUp Resistor                                              *
+*  *****************************************************************/
 ERROR_STATE_t DIO_SetPullupRes(uint8_t PortID, uint8_t PinNumber)
 {
     1c10:	df 93       	push	r29
@@ -4450,27 +4476,27 @@ ERROR_STATE_t DIO_SetPullupRes(uint8_t PortID, uint8_t PinNumber)
     1dda:	df 91       	pop	r29
     1ddc:	08 95       	ret
 
-00001dde <App_Init>:
-/*GLOBAL VARIABLE
-----------------------------*/
-uint8_t str[20];
-
-void App_Init(void)
+00001dde <APP_Init>:
+ *
+ * [Description]: 	Function to Initialize the application
+ *
+ *******************************************************************************/
+void APP_Init(void)
 {
     1dde:	df 93       	push	r29
     1de0:	cf 93       	push	r28
-    1de2:	00 d0       	rcall	.+0      	; 0x1de4 <App_Init+0x6>
-    1de4:	00 d0       	rcall	.+0      	; 0x1de6 <App_Init+0x8>
+    1de2:	00 d0       	rcall	.+0      	; 0x1de4 <APP_Init+0x6>
+    1de4:	00 d0       	rcall	.+0      	; 0x1de6 <APP_Init+0x8>
     1de6:	cd b7       	in	r28, 0x3d	; 61
     1de8:	de b7       	in	r29, 0x3e	; 62
-	UART_Config Config = {UART_1StopBit,UART_8Bit,UART_AsyncDouble,UART_Disable};
+	UART_Config Config = {UART_1StopBit,UART_8Bit,UART_AsyncDouble,UART_Disable};//configuration of uart
     1dea:	19 82       	std	Y+1, r1	; 0x01
     1dec:	83 e0       	ldi	r24, 0x03	; 3
     1dee:	8a 83       	std	Y+2, r24	; 0x02
     1df0:	81 e0       	ldi	r24, 0x01	; 1
     1df2:	8b 83       	std	Y+3, r24	; 0x03
     1df4:	1c 82       	std	Y+4, r1	; 0x04
-	UART_VidInit(&Config,9600);
+	UART_VidInit(&Config,9600);//Inilialization uart
     1df6:	ce 01       	movw	r24, r28
     1df8:	01 96       	adiw	r24, 0x01	; 1
     1dfa:	60 e8       	ldi	r22, 0x80	; 128
@@ -4478,7 +4504,6 @@ void App_Init(void)
     1dfe:	0e 94 17 07 	call	0xe2e	; 0xe2e <UART_VidInit>
 	SPI_initMaster(); /* Master Initialization */
     1e02:	0e 94 f8 08 	call	0x11f0	; 0x11f0 <SPI_initMaster>
-
 }
     1e06:	0f 90       	pop	r0
     1e08:	0f 90       	pop	r0
@@ -4501,7 +4526,7 @@ void APP_Update(void)
     1e22:	de bf       	out	0x3e, r29	; 62
     1e24:	0f be       	out	0x3f, r0	; 63
     1e26:	cd bf       	out	0x3d, r28	; 61
-	UART_receiveString(str);
+	UART_receiveString(str);//Receive data from Uart
     1e28:	88 e6       	ldi	r24, 0x68	; 104
     1e2a:	91 e0       	ldi	r25, 0x01	; 1
     1e2c:	0e 94 ab 08 	call	0x1156	; 0x1156 <UART_receiveString>
@@ -4649,7 +4674,7 @@ _delay_loop_2(uint16_t __count)
     1f10:	9a 83       	std	Y+2, r25	; 0x02
     1f12:	89 83       	std	Y+1, r24	; 0x01
 	_delay_ms(100); /* delay until MC2 finish its initialization task */
-	SPI_sendString(str);
+	SPI_sendString(str);//Send data To anothor MC
     1f14:	88 e6       	ldi	r24, 0x68	; 104
     1f16:	91 e0       	ldi	r25, 0x01	; 1
     1f18:	0e 94 68 09 	call	0x12d0	; 0x12d0 <SPI_sendString>
@@ -4666,21 +4691,27 @@ _delay_loop_2(uint16_t __count)
     1f2c:	08 95       	ret
 
 00001f2e <main>:
- */
-
-#include"APP.h"
-
+#include"APP/APP.h"
+/*****************************************************************************************
+ *                                MAIN FUNCTION                                          *
+ *****************************************************************************************/
 int main()
 {
     1f2e:	df 93       	push	r29
     1f30:	cf 93       	push	r28
     1f32:	cd b7       	in	r28, 0x3d	; 61
     1f34:	de b7       	in	r29, 0x3e	; 62
-	App_Init();
-    1f36:	0e 94 ef 0e 	call	0x1dde	; 0x1dde <App_Init>
-    while(1)
-    {
-    	APP_Update();
+/********************************************************************************
+*                           SYSTEM INITIALIZATION                              *
+********************************************************************************/
+	APP_Init();
+    1f36:	0e 94 ef 0e 	call	0x1dde	; 0x1dde <APP_Init>
+	while(1)
+	{
+/********************************************************************************
+*                        APPLICATION	(SUPER LOOP)						    *
+********************************************************************************/
+		APP_Update();
     1f3a:	0e 94 0a 0f 	call	0x1e14	; 0x1e14 <APP_Update>
     1f3e:	fd cf       	rjmp	.-6      	; 0x1f3a <main+0xc>
 

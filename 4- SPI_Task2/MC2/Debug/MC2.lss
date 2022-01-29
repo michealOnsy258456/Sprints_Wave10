@@ -9,25 +9,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   2 .bss          00000014  00800168  00800168  00001de8  2**0
                   ALLOC
-  3 .stab         0000183c  00000000  00000000  00001de8  2**2
+  3 .stab         00001950  00000000  00000000  00001de8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      00001167  00000000  00000000  00003624  2**0
+  4 .stabstr      0000122e  00000000  00000000  00003738  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_aranges 00000140  00000000  00000000  0000478b  2**0
+  5 .debug_aranges 00000140  00000000  00000000  00004966  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_pubnames 00000197  00000000  00000000  000048cb  2**0
+  6 .debug_pubnames 00000197  00000000  00000000  00004aa6  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   00001a88  00000000  00000000  00004a62  2**0
+  7 .debug_info   00001a88  00000000  00000000  00004c3d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 00000eb7  00000000  00000000  000064ea  2**0
+  8 .debug_abbrev 00000eb7  00000000  00000000  000066c5  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   00000df7  00000000  00000000  000073a1  2**0
+  9 .debug_line   00000df7  00000000  00000000  0000757c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_frame  00000160  00000000  00000000  00008198  2**2
+ 10 .debug_frame  00000160  00000000  00000000  00008374  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    000002bf  00000000  00000000  000082f8  2**0
+ 11 .debug_str    000002bf  00000000  00000000  000084d4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    000007f2  00000000  00000000  000085b7  2**0
+ 12 .debug_loc    000007f2  00000000  00000000  00008793  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -2128,10 +2128,10 @@ UART_ERROR_state_t  UART_receiveString(uint8_t *Str)
      f3a:	08 95       	ret
 
 00000f3c <SPI_initMaster>:
-
-/*******************************************************************************
- *                      Functions Definitions                                  *
- *******************************************************************************/
+ * @brief: This function initialize the SPI pins as master.
+ *
+ * @return function void.
+ */
 void SPI_initMaster(void)
 {
      f3c:	df 93       	push	r29
@@ -2187,7 +2187,10 @@ void SPI_initMaster(void)
      f88:	08 95       	ret
 
 00000f8a <SPI_initSlave>:
-
+ *
+ * @return function void.
+ *
+ */
 void SPI_initSlave(void)
 {
      f8a:	df 93       	push	r29
@@ -2243,7 +2246,10 @@ void SPI_initSlave(void)
      fd6:	08 95       	ret
 
 00000fd8 <SPI_sendByte>:
-
+ * @param [in]  data      -  character to be send through UART.
+ *
+ * @return function void.
+ */
 void SPI_sendByte(const uint8_t data)
 {
      fd8:	df 93       	push	r29
@@ -2270,7 +2276,10 @@ void SPI_sendByte(const uint8_t data)
      ffc:	08 95       	ret
 
 00000ffe <SPI_recieveByte>:
-
+ * @param [in]  a_Data      -  character to be send through UART.
+ *
+ * @return function error state.
+ */
 uint8_t SPI_recieveByte(void)
 {
      ffe:	df 93       	push	r29
@@ -2293,7 +2302,10 @@ uint8_t SPI_recieveByte(void)
     101a:	08 95       	ret
 
 0000101c <SPI_SendString>:
-
+ * @param [in]  Str    -  pointer to string to send through SPI.
+ *
+ * @return function void.
+ */
 void SPI_SendString(const uint8_t *Str)
 {
     101c:	df 93       	push	r29
@@ -2347,6 +2359,10 @@ void SPI_SendString(const uint8_t *Str)
     106c:	08 95       	ret
 
 0000106e <SPI_ReceiveString>:
+ * @param [out] Str    -  pointer to string to save the string through SPI.
+ *
+ * @return function error state.
+ */
 void SPI_ReceiveString(uint8_t *Str)
 {
     106e:	0f 93       	push	r16
@@ -2394,7 +2410,7 @@ void SPI_ReceiveString(uint8_t *Str)
     10b4:	89 81       	ldd	r24, Y+1	; 0x01
     10b6:	8f 5f       	subi	r24, 0xFF	; 255
     10b8:	89 83       	std	Y+1, r24	; 0x01
-}
+ */
 void SPI_ReceiveString(uint8_t *Str)
 {
 	uint8_t i = 0;
@@ -2440,10 +2456,10 @@ void SPI_ReceiveString(uint8_t *Str)
     10f6:	08 95       	ret
 
 000010f8 <DIO_setPortDirection>:
- */
 
-#include "DIO.h"
-
+/********************************************************************
+*  API to Set Port Direction                                       *
+*  *****************************************************************/
 ERROR_STATE_t DIO_setPortDirection(uint8_t PortID, uint8_t PortDirection)
 {
     10f8:	df 93       	push	r29
@@ -2571,7 +2587,7 @@ ERROR_STATE_t DIO_setPinDirection(uint8_t PortID, uint8_t PinNumber,uint8_t PinD
 	{
 		if (DIO_u8_OUTPUT==PinDirection)
     11ac:	8c 81       	ldd	r24, Y+4	; 0x04
-    11ae:	81 30       	cpi	r24, 0x01	; 1
+    11ae:	8f 3f       	cpi	r24, 0xFF	; 255
     11b0:	09 f0       	breq	.+2      	; 0x11b4 <DIO_setPinDirection+0x2c>
     11b2:	72 c0       	rjmp	.+228    	; 0x1298 <DIO_setPinDirection+0x110>
 		{
@@ -2882,8 +2898,9 @@ ERROR_STATE_t DIO_setPinDirection(uint8_t PortID, uint8_t PinNumber,uint8_t PinD
     13aa:	08 95       	ret
 
 000013ac <DIO_writePortValue>:
-
-/* API to Write Port  Value */
+/********************************************************************
+*   API to Write Port  Value                                         *
+*  *****************************************************************/
 ERROR_STATE_t DIO_writePortValue(uint8_t PortID, uint8_t PortValue)
 {
     13ac:	df 93       	push	r29
@@ -2981,8 +2998,10 @@ ERROR_STATE_t DIO_writePortValue(uint8_t PortID, uint8_t PortValue)
     143a:	08 95       	ret
 
 0000143c <DIO_writePinValue>:
+/********************************************************************
+*   API to Write Pin  Value                                         *
+*  *****************************************************************/
 
-/* API to Write Pin  Value */
 ERROR_STATE_t DIO_writePinValue(uint8_t PortID, uint8_t PinNumber,uint8_t PinDirection)
 {
     143c:	df 93       	push	r29
@@ -3320,8 +3339,9 @@ ERROR_STATE_t DIO_writePinValue(uint8_t PortID, uint8_t PinNumber,uint8_t PinDir
     165e:	08 95       	ret
 
 00001660 <DIO_readPort>:
-
-/* API to Read Port  Value */
+/********************************************************************
+*   API to Read Port  Value                                        *
+*  *****************************************************************/
 ERROR_STATE_t DIO_readPort(uint8_t PortID, uint8_t* PortState)
 {
     1660:	df 93       	push	r29
@@ -3446,8 +3466,9 @@ ERROR_STATE_t DIO_readPort(uint8_t PortID, uint8_t* PortState)
     1710:	08 95       	ret
 
 00001712 <DIO_readPin>:
-
-/* API to Read Pin  Value */
+/********************************************************************
+*   API to Read Pin  Value                                          *
+*  *****************************************************************/
 ERROR_STATE_t DIO_readPin(uint8_t PortID, uint8_t PinNumber,uint8_t* PinState)
 {
     1712:	df 93       	push	r29
@@ -3644,9 +3665,10 @@ ERROR_STATE_t DIO_readPin(uint8_t PortID, uint8_t PinNumber,uint8_t* PinState)
     1844:	08 95       	ret
 
 00001846 <DIO_TogglePin>:
-/*
- * API to toggle pin
  * */
+/********************************************************************
+*   API to toggle pin                                               *
+*  *****************************************************************/
 ERROR_STATE_t DIO_TogglePin(uint8_t PortID, uint8_t PinNumber)
 {
     1846:	df 93       	push	r29
@@ -3820,6 +3842,10 @@ ERROR_STATE_t DIO_TogglePin(uint8_t PortID, uint8_t PinNumber)
     195a:	08 95       	ret
 
 0000195c <DIO_SetPullupRes>:
+
+/********************************************************************
+*   API to PullUp Resistor                                              *
+*  *****************************************************************/
 ERROR_STATE_t DIO_SetPullupRes(uint8_t PortID, uint8_t PinNumber)
 {
     195c:	df 93       	push	r29
@@ -4112,33 +4138,33 @@ ERROR_STATE_t DIO_SetPullupRes(uint8_t PortID, uint8_t PinNumber)
     1b26:	df 91       	pop	r29
     1b28:	08 95       	ret
 
-00001b2a <App_Init>:
-
-
-
-
-void App_Init(void)
+00001b2a <APP_Init>:
+ *
+ * [Description]: 	Function to Initialize the application
+ *
+ *******************************************************************************/
+void APP_Init(void)
 {
     1b2a:	df 93       	push	r29
     1b2c:	cf 93       	push	r28
-    1b2e:	00 d0       	rcall	.+0      	; 0x1b30 <App_Init+0x6>
-    1b30:	00 d0       	rcall	.+0      	; 0x1b32 <App_Init+0x8>
+    1b2e:	00 d0       	rcall	.+0      	; 0x1b30 <APP_Init+0x6>
+    1b30:	00 d0       	rcall	.+0      	; 0x1b32 <APP_Init+0x8>
     1b32:	cd b7       	in	r28, 0x3d	; 61
     1b34:	de b7       	in	r29, 0x3e	; 62
-	UART_Config Config = {UART_1StopBit,UART_8Bit,UART_AsyncDouble,UART_Disable};
+	UART_Config Config = {UART_1StopBit,UART_8Bit,UART_AsyncDouble,UART_Disable};//configuration of uart
     1b36:	19 82       	std	Y+1, r1	; 0x01
     1b38:	83 e0       	ldi	r24, 0x03	; 3
     1b3a:	8a 83       	std	Y+2, r24	; 0x02
     1b3c:	81 e0       	ldi	r24, 0x01	; 1
     1b3e:	8b 83       	std	Y+3, r24	; 0x03
     1b40:	1c 82       	std	Y+4, r1	; 0x04
-	UART_VidInit(&Config,9600);
+	UART_VidInit(&Config,9600);//Inilialization uart
     1b42:	ce 01       	movw	r24, r28
     1b44:	01 96       	adiw	r24, 0x01	; 1
     1b46:	60 e8       	ldi	r22, 0x80	; 128
     1b48:	75 e2       	ldi	r23, 0x25	; 37
     1b4a:	0e 94 bd 05 	call	0xb7a	; 0xb7a <UART_VidInit>
-	SPI_initSlave();
+	SPI_initSlave();/* Slave Initialization */
     1b4e:	0e 94 c5 07 	call	0xf8a	; 0xf8a <SPI_initSlave>
 }
     1b52:	0f 90       	pop	r0
@@ -4156,15 +4182,15 @@ void APP_Update(void)
     1b62:	cf 93       	push	r28
     1b64:	cd b7       	in	r28, 0x3d	; 61
     1b66:	de b7       	in	r29, 0x3e	; 62
-	SPI_ReceiveString(str);
+	SPI_ReceiveString(str);//Receive data from SPI
     1b68:	88 e6       	ldi	r24, 0x68	; 104
     1b6a:	91 e0       	ldi	r25, 0x01	; 1
     1b6c:	0e 94 37 08 	call	0x106e	; 0x106e <SPI_ReceiveString>
-	UART_sendString(str);
+	UART_sendString(str);//Send data To anothor Terminal
     1b70:	88 e6       	ldi	r24, 0x68	; 104
     1b72:	91 e0       	ldi	r25, 0x01	; 1
     1b74:	0e 94 1e 07 	call	0xe3c	; 0xe3c <UART_sendString>
-	UART_sendByte('\r');
+	UART_sendByte('\r');//Send NEWLINE To Terminal
     1b78:	8d e0       	ldi	r24, 0x0D	; 13
     1b7a:	0e 94 06 07 	call	0xe0c	; 0xe0c <UART_sendByte>
 }
@@ -4173,21 +4199,27 @@ void APP_Update(void)
     1b82:	08 95       	ret
 
 00001b84 <main>:
- */
-
-#include"APP.h"
-
+#include"APP/APP.h"
+/*****************************************************************************************
+ *                                MAIN FUNCTION                                          *
+ *****************************************************************************************/
 int main()
 {
     1b84:	df 93       	push	r29
     1b86:	cf 93       	push	r28
     1b88:	cd b7       	in	r28, 0x3d	; 61
     1b8a:	de b7       	in	r29, 0x3e	; 62
-	App_Init();
-    1b8c:	0e 94 95 0d 	call	0x1b2a	; 0x1b2a <App_Init>
-    while(1)
-    {
-    	APP_Update();
+/********************************************************************************
+*                           SYSTEM INITIALIZATION                              *
+********************************************************************************/
+	APP_Init();
+    1b8c:	0e 94 95 0d 	call	0x1b2a	; 0x1b2a <APP_Init>
+	while(1)
+	{
+/********************************************************************************
+*                        APPLICATION	(SUPER LOOP)						    *
+********************************************************************************/
+		APP_Update();
     1b90:	0e 94 b0 0d 	call	0x1b60	; 0x1b60 <APP_Update>
     1b94:	fd cf       	rjmp	.-6      	; 0x1b90 <main+0xc>
 

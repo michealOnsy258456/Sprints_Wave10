@@ -1,22 +1,37 @@
-main.o main.o: ../main.c \
-  C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\APP/APP.h \
-  C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\MCAL\SPI/SPI.h \
-  C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\LIBRARY/Std_type.h \
-  C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\LIBRARY/common_macros.h \
-  C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\LIBRARY/Register.h \
-  C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\MCAL\DIO/DIO.h \
-  C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\MCAL\UART/UART.h
+main.o main.o: ../main.c ../APP/APP.h ../APP/../MCAL/SPI/SPI.h \
+  ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h \
+  ../APP/../MCAL/SPI/../../LIBRARY/common_macros.h \
+  ../APP/../MCAL/SPI/../../LIBRARY/Register.h \
+  ../APP/../MCAL/SPI/../../MCAL/DIO/DIO.h \
+  ../APP/../MCAL/SPI/../../MCAL/DIO/../../LIBRARY/Std_type.h \
+  ../APP/../MCAL/SPI/../../MCAL/DIO/../../LIBRARY/common_macros.h \
+  ../APP/../MCAL/SPI/../../MCAL/DIO/../../LIBRARY/Register.h \
+  ../APP/../MCAL/UART/UART.h ../APP/../MCAL/UART/../../LIBRARY/Std_type.h \
+  ../APP/../MCAL/UART/../../LIBRARY/common_macros.h \
+  ../APP/../MCAL/UART/../../LIBRARY/Register.h
 
-C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\APP/APP.h:
+../APP/APP.h:
 
-C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\MCAL\SPI/SPI.h:
+../APP/../MCAL/SPI/SPI.h:
 
-C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\LIBRARY/Std_type.h:
+../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:
 
-C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\LIBRARY/common_macros.h:
+../APP/../MCAL/SPI/../../LIBRARY/common_macros.h:
 
-C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\LIBRARY/Register.h:
+../APP/../MCAL/SPI/../../LIBRARY/Register.h:
 
-C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\MCAL\DIO/DIO.h:
+../APP/../MCAL/SPI/../../MCAL/DIO/DIO.h:
 
-C:\Users\Micheal-Onsy\Desktop\delivery\4-\ SPI_Task2\MC2\MCAL\UART/UART.h:
+../APP/../MCAL/SPI/../../MCAL/DIO/../../LIBRARY/Std_type.h:
+
+../APP/../MCAL/SPI/../../MCAL/DIO/../../LIBRARY/common_macros.h:
+
+../APP/../MCAL/SPI/../../MCAL/DIO/../../LIBRARY/Register.h:
+
+../APP/../MCAL/UART/UART.h:
+
+../APP/../MCAL/UART/../../LIBRARY/Std_type.h:
+
+../APP/../MCAL/UART/../../LIBRARY/common_macros.h:
+
+../APP/../MCAL/UART/../../LIBRARY/Register.h:

@@ -1,76 +1,78 @@
-16:56:04 **** Build of configuration Debug for project MC2 ****
+22:04:56 **** Incremental Build of configuration Debug for project MC2 ****
 make all 
 Building file: ../MCAL/UART/UART.c
 Invoking: AVR Compiler
-avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\UART" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\APP" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
-In file included from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from ../MCAL/UART/UART.h:10,
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/UART/UART.h:20,
                  from ../MCAL/UART/UART.c:12:
 c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
 In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from ../MCAL/UART/UART.h:10,
+                 from ../MCAL/UART/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/UART/UART.h:20,
                  from ../MCAL/UART/UART.c:12:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../MCAL/UART/UART.c
  
 Building file: ../MCAL/SPI/SPI.c
 Invoking: AVR Compiler
-avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\UART" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\APP" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/SPI/SPI.d" -MT"MCAL/SPI/SPI.o" -c -o "MCAL/SPI/SPI.o" "../MCAL/SPI/SPI.c"
-In file included from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from ../MCAL/SPI/SPI.h:12,
-                 from ../MCAL/SPI/SPI.c:10:
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/SPI/SPI.d" -MT"MCAL/SPI/SPI.o" -c -o "MCAL/SPI/SPI.o" "../MCAL/SPI/SPI.c"
+In file included from ../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/SPI/SPI.h:19,
+                 from ../MCAL/SPI/SPI.c:13:
 c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
 In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from ../MCAL/SPI/SPI.h:12,
-                 from ../MCAL/SPI/SPI.c:10:
+                 from ../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/SPI/SPI.h:19,
+                 from ../MCAL/SPI/SPI.c:13:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../MCAL/SPI/SPI.c
  
 Building file: ../MCAL/DIO/DIO.c
 Invoking: AVR Compiler
-avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\UART" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\APP" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
-In file included from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from ../MCAL/DIO/DIO.h:13,
-                 from ../MCAL/DIO/DIO.c:8:
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:20,
+                 from ../MCAL/DIO/DIO.c:13:
 c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
 In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from ../MCAL/DIO/DIO.h:13,
-                 from ../MCAL/DIO/DIO.c:8:
+                 from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:20,
+                 from ../MCAL/DIO/DIO.c:13:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../MCAL/DIO/DIO.c
  
 Building file: ../APP/APP.c
 Invoking: AVR Compiler
-avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\UART" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\APP" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
-In file included from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI/SPI.h:12,
-                 from ../APP/APP.h:11,
-                 from ../APP/APP.c:7:
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
 c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
 In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI/SPI.h:12,
-                 from ../APP/APP.h:11,
-                 from ../APP/APP.c:7:
+                 from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/APP.c: In function 'APP_Update':
+../APP/APP.c:38: warning: implicit declaration of function 'SPI_ReceiveString'
 Finished building: ../APP/APP.c
  
 Building file: ../main.c
 Invoking: AVR Compiler
-avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\UART" -I"C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\APP" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI/SPI.h:12,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\APP/APP.h:11,
-                 from ../main.c:8:
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
 c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
 In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\LIBRARY/Std_type.h:11,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\MCAL\SPI/SPI.h:12,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\4- SPI_Task2\MC2\APP/APP.h:11,
-                 from ../main.c:8:
+                 from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
@@ -99,5 +101,5 @@ Data:        284 bytes (13.9% Full)
 Finished building: sizedummy
  
 
-16:56:06 Build Finished (took 2s.414ms)
+22:04:58 Build Finished (took 1s.653ms)
 

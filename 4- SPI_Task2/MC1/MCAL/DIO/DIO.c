@@ -1,12 +1,20 @@
-/*
- * DIO.c
+ /******************************************************************************
  *
- *  Created on: Jan 2, 2022
- *      Author: Micheal-Onsy
- */
+ * Module: DIO
+ *
+ * File Name: DIO.c
+ *
+ * Description: Source file for the DIO AVR driver
+ *
+ * Author: Micheal Onsy
+ *
+ *******************************************************************************/
 
 #include "DIO.h"
 
+/********************************************************************
+*  API to Set Port Direction                                       *
+*  *****************************************************************/
 ERROR_STATE_t DIO_setPortDirection(uint8_t PortID, uint8_t PortDirection)
 {
     ERROR_STATE_t u8_ERROR_STAT = ERROR_OK;
@@ -95,8 +103,9 @@ ERROR_STATE_t DIO_setPinDirection(uint8_t PortID, uint8_t PinNumber,uint8_t PinD
 	}	  //END of ELSE
 	return u8_ERROR_STAT;
 }	  //END DIO_setPinDirection
-
-/* API to Write Port  Value */
+/********************************************************************
+*   API to Write Port  Value                                         *
+*  *****************************************************************/
 ERROR_STATE_t DIO_writePortValue(uint8_t PortID, uint8_t PortValue)
 {
     ERROR_STATE_t u8_ERROR_STAT = ERROR_OK;
@@ -120,8 +129,10 @@ ERROR_STATE_t DIO_writePortValue(uint8_t PortID, uint8_t PortValue)
     } //END of SWITCH
     return u8_ERROR_STAT ;
 }	  //END DIO_writePortValue
+/********************************************************************
+*   API to Write Pin  Value                                         *
+*  *****************************************************************/
 
-/* API to Write Pin  Value */
 ERROR_STATE_t DIO_writePinValue(uint8_t PortID, uint8_t PinNumber,uint8_t PinDirection)
 {
     ERROR_STATE_t u8_ERROR_STAT = ERROR_OK;
@@ -184,8 +195,9 @@ ERROR_STATE_t DIO_writePinValue(uint8_t PortID, uint8_t PinNumber,uint8_t PinDir
 	}	  //END of ELSE
 	return u8_ERROR_STAT ;
 }	  //END of DIO_writePinValue
-
-/* API to Read Port  Value */
+/********************************************************************
+*   API to Read Port  Value                                        *
+*  *****************************************************************/
 ERROR_STATE_t DIO_readPort(uint8_t PortID, uint8_t* PortState)
 {
     ERROR_STATE_t u8_ERROR_STAT = ERROR_OK;
@@ -219,8 +231,9 @@ ERROR_STATE_t DIO_readPort(uint8_t PortID, uint8_t* PortState)
 	}
 	return u8_ERROR_STAT ;
 }	  //END of DIO_readPort
-
-/* API to Read Pin  Value */
+/********************************************************************
+*   API to Read Pin  Value                                          *
+*  *****************************************************************/
 ERROR_STATE_t DIO_readPin(uint8_t PortID, uint8_t PinNumber,uint8_t* PinState)
 {
     ERROR_STATE_t u8_ERROR_STAT = ERROR_OK;
@@ -264,6 +277,9 @@ ERROR_STATE_t DIO_readPin(uint8_t PortID, uint8_t PinNumber,uint8_t* PinState)
 /*
  * API to toggle pin
  * */
+/********************************************************************
+*   API to toggle pin                                               *
+*  *****************************************************************/
 ERROR_STATE_t DIO_TogglePin(uint8_t PortID, uint8_t PinNumber)
 {
     ERROR_STATE_t u8_ERROR_STAT = ERROR_OK;
@@ -296,6 +312,10 @@ ERROR_STATE_t DIO_TogglePin(uint8_t PortID, uint8_t PinNumber)
     }	  //END of ELSE
     return u8_ERROR_STAT ;
 }
+
+/********************************************************************
+*   API to PullUp Resistor                                              *
+*  *****************************************************************/
 ERROR_STATE_t DIO_SetPullupRes(uint8_t PortID, uint8_t PinNumber)
 {
     ERROR_STATE_t u8_ERROR_STAT = ERROR_OK;

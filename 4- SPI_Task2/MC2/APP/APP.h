@@ -1,18 +1,26 @@
-/*
- * APP.h
+/******************************************************************************
  *
- *  Created on: Jan 24, 2022
- *      Author: Micheal-Onsy
- */
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
+
 
 #ifndef APP_APP_H_
 #define APP_APP_H_
 
-#include "SPI.h"
-#include "UART.h"
+/*******************************************************************************
+ *                              INCLUDES                                       *
+ *******************************************************************************/
+#include "../MCAL/SPI/SPI.h"
+#include "../MCAL/UART/UART.h"
 
-
-void App_Init(void);
+void APP_Init();
 void APP_Update(void);
 
 

@@ -202,3 +202,394 @@ Data:        284 bytes (13.9% Full)
 
 Finished building: sizedummy
  
+21:53:28 **** Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:10:22: error: Std_type.h: No such file or directory
+../MCAL/UART/UART.h:11:27: error: common_macros.h: No such file or directory
+../MCAL/UART/UART.h:12:22: error: Register.h: No such file or directory
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_ERROR_state_t'
+../MCAL/UART/UART.h:102: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.h:103: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.h:104: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.h:105: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.h:106: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+../MCAL/UART/UART.c:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.c:126: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.c:143: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.c:164: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.c:191: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+make: *** [MCAL/UART/UART.o] Error 1
+21:53:29 **** Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:10:22: error: Std_type.h: No such file or directory
+../MCAL/UART/UART.h:11:27: error: common_macros.h: No such file or directory
+../MCAL/UART/UART.h:12:22: error: Register.h: No such file or directory
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_ERROR_state_t'
+../MCAL/UART/UART.h:102: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.h:103: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.h:104: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.h:105: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.h:106: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+../MCAL/UART/UART.c:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.c:126: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.c:143: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.c:164: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.c:191: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+make: *** [MCAL/UART/UART.o] Error 1
+21:57:12 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/UART/UART.h:20,
+                 from ../MCAL/UART/UART.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/UART/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/UART/UART.h:20,
+                 from ../MCAL/UART/UART.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../MCAL/SPI/SPI.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/SPI/SPI.d" -MT"MCAL/SPI/SPI.o" -c -o "MCAL/SPI/SPI.o" "../MCAL/SPI/SPI.c"
+In file included from ../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/SPI/SPI.h:19,
+                 from ../MCAL/SPI/SPI.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/SPI/SPI.h:19,
+                 from ../MCAL/SPI/SPI.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../MCAL/SPI/SPI.h:22,
+                 from ../MCAL/SPI/SPI.c:13:
+../MCAL/SPI/../../MCAL/DIO/DIO.h:20:22: error: Register.h: No such file or directory
+../MCAL/SPI/../../MCAL/DIO/DIO.h:21:27: error: common_macros.h: No such file or directory
+../MCAL/SPI/../../MCAL/DIO/DIO.h:22:22: error: Std_type.h: No such file or directory
+make: *** [MCAL/SPI/SPI.o] Error 1
+21:57:13 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:10:22: error: Std_type.h: No such file or directory
+../MCAL/UART/UART.h:11:27: error: common_macros.h: No such file or directory
+../MCAL/UART/UART.h:12:22: error: Register.h: No such file or directory
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_ERROR_state_t'
+../MCAL/UART/UART.h:102: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.h:103: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.h:104: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.h:105: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.h:106: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+../MCAL/UART/UART.c:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.c:126: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.c:143: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.c:164: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.c:191: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+make: *** [MCAL/UART/UART.o] Error 1
+21:57:31 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/SPI/SPI.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/SPI/SPI.d" -MT"MCAL/SPI/SPI.o" -c -o "MCAL/SPI/SPI.o" "../MCAL/SPI/SPI.c"
+In file included from ../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/SPI/SPI.h:19,
+                 from ../MCAL/SPI/SPI.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/SPI/SPI.h:19,
+                 from ../MCAL/SPI/SPI.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/SPI/SPI.c
+ 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:20,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:20,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/DIO/DIO.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:24: warning: implicit declaration of function 'APP_Init'
+Finished building: ../main.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./MCAL/UART/UART.o  ./MCAL/SPI/SPI.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+./main.o: In function `main':
+../main.c:24: undefined reference to `APP_Init'
+make: *** [MC1.elf] Error 1
+21:57:32 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:10:22: error: Std_type.h: No such file or directory
+../MCAL/UART/UART.h:11:27: error: common_macros.h: No such file or directory
+../MCAL/UART/UART.h:12:22: error: Register.h: No such file or directory
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_ERROR_state_t'
+../MCAL/UART/UART.h:102: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.h:103: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.h:104: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.h:105: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.h:106: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+../MCAL/UART/UART.c:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.c:126: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.c:143: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.c:164: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.c:191: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+make: *** [MCAL/UART/UART.o] Error 1
+21:58:20 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./MCAL/UART/UART.o  ./MCAL/SPI/SPI.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8446 bytes (25.8% Full)
+(.text + .data + .bootloader)
+
+Data:        284 bytes (13.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:58:22 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:10:22: error: Std_type.h: No such file or directory
+../MCAL/UART/UART.h:11:27: error: common_macros.h: No such file or directory
+../MCAL/UART/UART.h:12:22: error: Register.h: No such file or directory
+In file included from ../MCAL/UART/UART.c:12:
+../MCAL/UART/UART.h:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_ERROR_state_t'
+../MCAL/UART/UART.h:102: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.h:103: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.h:104: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.h:105: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.h:106: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+../MCAL/UART/UART.c:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_VidInit'
+../MCAL/UART/UART.c:126: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_recieveByte'
+../MCAL/UART/UART.c:143: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendByte'
+../MCAL/UART/UART.c:164: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_sendString'
+../MCAL/UART/UART.c:191: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'UART_receiveString'
+make: *** [MCAL/UART/UART.o] Error 1
+22:04:56 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8446 bytes (25.8% Full)
+(.text + .data + .bootloader)
+
+Data:        284 bytes (13.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:04:56 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/UART/UART.h:20,
+                 from ../MCAL/UART/UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/UART/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/UART/UART.h:20,
+                 from ../MCAL/UART/UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../MCAL/SPI/SPI.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/SPI/SPI.d" -MT"MCAL/SPI/SPI.o" -c -o "MCAL/SPI/SPI.o" "../MCAL/SPI/SPI.c"
+In file included from ../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/SPI/SPI.h:19,
+                 from ../MCAL/SPI/SPI.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/SPI/SPI.h:19,
+                 from ../MCAL/SPI/SPI.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/SPI/SPI.c
+ 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:20,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:20,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/DIO/DIO.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/APP.c: In function 'APP_Update':
+../APP/APP.c:38: warning: implicit declaration of function 'SPI_ReceiveString'
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/SPI/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/SPI/SPI.h:19,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./MCAL/UART/UART.o  ./MCAL/SPI/SPI.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+Finished building target: MC2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC2.elf  >"MC2.lss"
+Finished building: MC2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7508 bytes (22.9% Full)
+(.text + .data + .bootloader)
+
+Data:        284 bytes (13.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

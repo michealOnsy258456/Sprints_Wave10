@@ -1,17 +1,29 @@
-/*
- * DIO.h
+ /******************************************************************************
  *
- *  Created on: Jan 2, 2022
- *      Author: Micheal-Onsy
- */
+ * Module: DIO
+ *
+ * File Name: DIO.h
+ *
+ * Description: Header file for the DIO AVR driver
+ *
+ * Author: Micheal Onsy
+ *
+ *******************************************************************************/
+
 
 #ifndef DIO_H_
 #define DIO_H_
+/*******************************************************************************
+ *                            Includes                                         *
+ *******************************************************************************/
 
-#include "Register.h"
-#include "common_macros.h"
-#include "Std_type.h"
+#include "../../LIBRARY/Std_type.h"
+#include "../../LIBRARY/common_macros.h"
+#include "../../LIBRARY/Register.h"
 
+/*******************************************************************************
+ *                            Data type                                  *
+ *******************************************************************************/
 
 
 typedef enum
@@ -23,6 +35,9 @@ typedef enum
 
 }ERROR_STATE_t;
 
+/*******************************************************************************
+ *                            Common MACROS                                     *
+ *******************************************************************************/
 
 
 /* Macros for PORTS */
@@ -42,7 +57,7 @@ typedef enum
 #define PIN7              7
 
 /* Macros for Pin Direction */
-#define DIO_u8_OUTPUT            1
+#define DIO_u8_OUTPUT            255
 #define DIO_u8_INPUT             0
 
 /* Macros for Pin Value */
@@ -50,6 +65,10 @@ typedef enum
 #define DIO_u8_LOW               0
 
 void DIO_voidInit         (void);
+/*-----------FUNCTION DECLERATIONS-------------*/
+/*******************************************************************************
+ *                           FUNCTION DECLERATIONS                                        *
+ *******************************************************************************/
 
 ERROR_STATE_t DIO_setPortDirection(uint8_t PORTID, uint8_t PortDirection);
 ERROR_STATE_t DIO_setPinDirection(uint8_t PortID , uint8_t PinNumber, uint8_t PinDirection);
