@@ -110,3 +110,153 @@ Data:        332 bytes (16.2% Full)
 
 Finished building: sizedummy
  
+22:43:30 **** Build of configuration Debug for project I2C ****
+make all 
+Building file: ../MCAL/UART/uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/uart.d" -MT"MCAL/UART/uart.o" -c -o "MCAL/UART/uart.o" "../MCAL/UART/uart.c"
+In file included from ../MCAL/UART/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/UART/UART.h:16,
+                 from ../MCAL/UART/uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/UART/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/UART/UART.h:16,
+                 from ../MCAL/UART/uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/UART/uart.c
+ 
+Building file: ../MCAL/I2C/i2c.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/I2C/i2c.d" -MT"MCAL/I2C/i2c.o" -c -o "MCAL/I2C/i2c.o" "../MCAL/I2C/i2c.c"
+In file included from ../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../MCAL/I2C/i2c.h:18,
+                 from ../MCAL/I2C/i2c.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../MCAL/I2C/i2c.h:18,
+                 from ../MCAL/I2C/i2c.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/I2C/i2c.c
+ 
+Building file: ../HAL/EEPROM/EEPROM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/EEPROM/EEPROM.d" -MT"HAL/EEPROM/EEPROM.o" -c -o "HAL/EEPROM/EEPROM.o" "../HAL/EEPROM/EEPROM.c"
+In file included from ../HAL/EEPROM/../../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../HAL/EEPROM/../../MCAL/I2C/i2c.h:18,
+                 from ../HAL/EEPROM/EEPROM.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../HAL/EEPROM/../../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../HAL/EEPROM/../../MCAL/I2C/i2c.h:18,
+                 from ../HAL/EEPROM/EEPROM.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/EEPROM/EEPROM.c
+ 
+Building file: ../Application/App.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Application/App.d" -MT"Application/App.o" -c -o "Application/App.o" "../Application/App.c"
+In file included from ../Application/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../Application/../MCAL/I2C/i2c.h:18,
+                 from ../Application/App.h:20,
+                 from ../Application/App.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Application/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../Application/../MCAL/I2C/i2c.h:18,
+                 from ../Application/App.h:20,
+                 from ../Application/App.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Application/App.c: In function 'APP_Update':
+../Application/App.c:63: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../Application/App.c:68: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../Application/App.c:72: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../Application/App.c:74: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../Application/App.c:79: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../Application/App.c:82: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../Application/App.c:84: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+Finished building: ../Application/App.c
+ 
+Building file: ../EEPROM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"EEPROM.d" -MT"EEPROM.o" -c -o "EEPROM.o" "../EEPROM.c"
+In file included from ../Application/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../Application/../MCAL/I2C/i2c.h:18,
+                 from ../Application/APP.h:20,
+                 from ../EEPROM.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Application/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../Application/../MCAL/I2C/i2c.h:18,
+                 from ../Application/APP.h:20,
+                 from ../EEPROM.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../EEPROM.c
+ 
+Building target: I2C.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,I2C.map -mmcu=atmega32 -o "I2C.elf"  ./MCAL/UART/uart.o  ./MCAL/I2C/i2c.o  ./HAL/EEPROM/EEPROM.o  ./Application/App.o  ./EEPROM.o   
+Finished building target: I2C.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S I2C.elf  >"I2C.lss"
+Finished building: I2C.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 I2C.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6106 bytes (18.6% Full)
+(.text + .data + .bootloader)
+
+Data:        332 bytes (16.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:44:52 **** Incremental Build of configuration Debug for project I2C ****
+make all 
+Building file: ../EEPROM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"EEPROM.d" -MT"EEPROM.o" -c -o "EEPROM.o" "../EEPROM.c"
+In file included from ../Application/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../Application/../MCAL/I2C/i2c.h:18,
+                 from ../Application/APP.h:20,
+                 from ../EEPROM.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Application/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../Application/../MCAL/I2C/i2c.h:18,
+                 from ../Application/APP.h:20,
+                 from ../EEPROM.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../EEPROM.c
+ 
+Building target: I2C.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,I2C.map -mmcu=atmega32 -o "I2C.elf"  ./MCAL/UART/uart.o  ./MCAL/I2C/i2c.o  ./HAL/EEPROM/EEPROM.o  ./Application/App.o  ./EEPROM.o   
+Finished building target: I2C.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S I2C.elf  >"I2C.lss"
+Finished building: I2C.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 I2C.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6106 bytes (18.6% Full)
+(.text + .data + .bootloader)
+
+Data:        332 bytes (16.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
