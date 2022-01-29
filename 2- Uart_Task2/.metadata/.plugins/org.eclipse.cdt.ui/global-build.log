@@ -198,3 +198,248 @@ Data:        348 bytes (17.0% Full)
 
 Finished building: sizedummy
  
+21:03:25 **** Build of configuration Debug for project Traffic_Light ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:15,
+                 from ../MCAL/UART/UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:15,
+                 from ../MCAL/UART/UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/DIO.c:13:
+../MCAL/DIO/DIO.h:16:22: error: Register.h: No such file or directory
+../MCAL/DIO/DIO.h:17:27: error: common_macros.h: No such file or directory
+../MCAL/DIO/DIO.h:18:22: error: Std_type.h: No such file or directory
+In file included from ../MCAL/DIO/DIO.c:13:
+../MCAL/DIO/DIO.h:59: error: expected ')' before 'PORTID'
+../MCAL/DIO/DIO.h:60: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:61: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:62: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:63: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:64: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:65: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:66: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:15: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:43: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:105: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:130: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:194: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:229: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:272: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:304: error: expected ')' before 'PortID'
+make: *** [MCAL/DIO/DIO.o] Error 1
+21:03:59 **** Incremental Build of configuration Debug for project Traffic_Light ****
+make all 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/../../LIBRARY/Std_type.h:10,
+                 from ../MCAL/DIO/DIO.h:18,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/DIO/../../LIBRARY/Std_type.h:10,
+                 from ../MCAL/DIO/DIO.h:18,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/DIO/DIO.c
+ 
+Building file: ../HAL/LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/LED/LED.d" -MT"HAL/LED/LED.o" -c -o "HAL/LED/LED.o" "../HAL/LED/LED.c"
+In file included from ../HAL/LED/LED.c:9:
+../HAL/LED/LED.h:13:17: error: DIO.h: No such file or directory
+In file included from ../HAL/LED/LED.c:9:
+../HAL/LED/LED.h:27: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_Init'
+../HAL/LED/LED.h:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_toggle'
+../HAL/LED/LED.h:29: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_Close'
+../HAL/LED/LED.h:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_Open'
+../HAL/LED/LED.h:31: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_AllOpen'
+../HAL/LED/LED.h:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_AllClose'
+../HAL/LED/LED.c:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_Init'
+../HAL/LED/LED.c:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_toggle'
+../HAL/LED/LED.c:58: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_Open'
+../HAL/LED/LED.c:81: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_Close'
+../HAL/LED/LED.c:105: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_AllOpen'
+../HAL/LED/LED.c:116: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'LED_AllClose'
+make: *** [HAL/LED/LED.o] Error 1
+21:04:26 **** Incremental Build of configuration Debug for project Traffic_Light ****
+make all 
+Building file: ../HAL/LED/LED.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/LED/LED.d" -MT"HAL/LED/LED.o" -c -o "HAL/LED/LED.o" "../HAL/LED/LED.c"
+In file included from ../HAL/LED/../../MCAL/DIO/../../LIBRARY/Std_type.h:10,
+                 from ../HAL/LED/../../MCAL/DIO/DIO.h:18,
+                 from ../HAL/LED/LED.h:13,
+                 from ../HAL/LED/LED.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../HAL/LED/../../MCAL/DIO/../../LIBRARY/Std_type.h:10,
+                 from ../HAL/LED/../../MCAL/DIO/DIO.h:18,
+                 from ../HAL/LED/LED.h:13,
+                 from ../HAL/LED/LED.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/LED/LED.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:15,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:15,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/APP.c: In function 'APP_Update':
+../APP/APP.c:55: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:59: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:64: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:68: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:78: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:85: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:92: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:98: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:103: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:15,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:15,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:24: warning: implicit declaration of function 'APP_Init'
+../main.c:30: warning: implicit declaration of function 'APP_Update'
+Finished building: ../main.c
+ 
+Building target: Traffic_Light.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Traffic_Light.map -mmcu=atmega32 -o "Traffic_Light.elf"  ./MCAL/UART/UART.o  ./MCAL/DIO/DIO.o  ./HAL/LED/LED.o  ./APP/APP.o  ./main.o   
+Finished building target: Traffic_Light.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Traffic_Light.elf  >"Traffic_Light.lss"
+Finished building: Traffic_Light.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Traffic_Light.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5076 bytes (15.5% Full)
+(.text + .data + .bootloader)
+
+Data:         84 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:31:10 **** Incremental Build of configuration Debug for project Traffic_Light ****
+make all 
+Building file: ../MCAL/UART/UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:20,
+                 from ../MCAL/UART/UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:20,
+                 from ../MCAL/UART/UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:20,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:20,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/APP.c: In function 'APP_Update':
+../APP/APP.c:55: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:59: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:64: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:68: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:78: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:85: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:92: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:98: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:103: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:20,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:20,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: Traffic_Light.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Traffic_Light.map -mmcu=atmega32 -o "Traffic_Light.elf"  ./MCAL/UART/UART.o  ./MCAL/DIO/DIO.o  ./HAL/LED/LED.o  ./APP/APP.o  ./main.o   
+Finished building target: Traffic_Light.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Traffic_Light.elf  >"Traffic_Light.lss"
+Finished building: Traffic_Light.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Traffic_Light.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5076 bytes (15.5% Full)
+(.text + .data + .bootloader)
+
+Data:         84 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

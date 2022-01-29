@@ -1,18 +1,58 @@
-06:45:28 **** Incremental Build of configuration Debug for project Traffic_Light ****
+21:31:10 **** Incremental Build of configuration Debug for project Traffic_Light ****
 make all 
-Building file: ../main.c
+Building file: ../MCAL/UART/UART.c
 Invoking: AVR Compiler
-avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP/APP.h:11,
-                 from ../main.c:8:
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/UART/UART.d" -MT"MCAL/UART/UART.o" -c -o "MCAL/UART/UART.o" "../MCAL/UART/UART.c"
+In file included from ../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:20,
+                 from ../MCAL/UART/UART.c:12:
 c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
 In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY/Std_type.h:10,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART/UART.h:10,
-                 from C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP/APP.h:11,
-                 from ../main.c:8:
+                 from ../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../MCAL/UART/UART.h:20,
+                 from ../MCAL/UART/UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/UART/UART.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:20,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:20,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/APP.c: In function 'APP_Update':
+../APP/APP.c:55: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:59: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:64: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:68: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness
+../APP/APP.c:78: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:85: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:92: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:98: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../APP/APP.c:103: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:20,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/UART/../../LIBRARY/Std_type.h:10,
+                 from ../APP/../MCAL/UART/UART.h:20,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
@@ -31,15 +71,15 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    8280 bytes (25.3% Full)
+Program:    5076 bytes (15.5% Full)
 (.text + .data + .bootloader)
 
-Data:        348 bytes (17.0% Full)
+Data:         84 bytes (4.1% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-06:45:29 Build Finished (took 1s.41ms)
+21:31:12 Build Finished (took 1s.449ms)
 

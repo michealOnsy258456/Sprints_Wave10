@@ -1,0 +1,39 @@
+/******************************************************************************
+ *
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
+
+
+#ifndef APP_APP_H_
+#define APP_APP_H_
+
+/*******************************************************************************
+ *                              INCLUDES                                       *
+ *******************************************************************************/
+#include "../MCAL/UART/UART.h"
+#include "LED.h"
+#include "string.h"
+
+#define GREEN   1
+#define YELLOW  2
+#define RED		3
+#define AT		4
+
+
+/*******************************************************************************
+ *                             Functions Prototypes                            *
+ *******************************************************************************/
+void AppInit(void);
+void AppUpdate(void);
+void APP_ClearBuffer(void);
+
+
+
+#endif /* APP_APP_H_ */

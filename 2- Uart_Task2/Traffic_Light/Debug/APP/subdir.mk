@@ -17,7 +17,7 @@ C_DEPS += \
 APP/%.o: ../APP/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: AVR Compiler'
-	avr-gcc -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\APP" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\HAL\LED" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\LIBRARY" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\DIO" -I"C:\Users\Micheal-Onsy\Desktop\delivery\2- Uart_Task2\Traffic_Light\MCAL\UART" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

@@ -1,9 +1,14 @@
-/*
- * DIO.c
+/******************************************************************************
  *
- *  Created on: Jan 2, 2022
- *      Author: Micheal-Onsy
- */
+ * [MODULE]: DIO
+ *
+ * [FILE NAME]: DIO.c
+ *
+ * [DESCRIPTION]: Source file for the DIO
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
 
 #include "DIO.h"
 

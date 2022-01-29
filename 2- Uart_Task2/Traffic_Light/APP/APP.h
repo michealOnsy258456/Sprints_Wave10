@@ -1,23 +1,42 @@
-/*
- * APP.h
+/******************************************************************************
  *
- *  Created on: Jan 24, 2022
- *      Author: Micheal-Onsy
- */
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
+
 
 #ifndef APP_APP_H_
 #define APP_APP_H_
 
-#include "UART.h"
-#include "LED.h"
-#include "string.h"
+/*******************************************************************************
+ *                              INCLUDES                                       *
+ *******************************************************************************/
+#include "../MCAL/UART/UART.h"
+#include "../HAL/LED/LED.h"
+#include <string.h>
 
+
+
+/*******************************************************************************
+ *                              Macros                                       *
+ *******************************************************************************/
 #define GREEN   1
 #define YELLOW  2
 #define RED		3
 #define AT		4
-void AppInit(void);
-void AppUpdate(void);
+
+
+/*******************************************************************************
+ *                             Functions Prototypes                            *
+ *******************************************************************************/
+void APP_Init(void);
+void APP_Update(void);
 void APP_ClearBuffer(void);
 
 
