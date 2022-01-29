@@ -1,10 +1,16 @@
-/*
- * UART.c
+/******************************************************************************
  *
- *  Created on: Jan 14, 2020
- *      Author: micheal_onsy
- */
+ * [MODULE]: UART
+ *
+ * [FILE NAME]: UART.c
+ *
+ * [DESCRIPTION]: Source file for the UART
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
 #include "UART.h"
+
 
 
 
@@ -102,7 +108,7 @@ UART_ERROR_state_t  UART_VidInit(UART_Config *a_ptr,uint16_t a_BoudRate)
 	}
 	else if (a_ptr->Mode == UART_Sync)
 	{
-		a_BoudRate= ((float32_t)F_CPU/(2*a_BoudRate))-1;
+		a_BoudRate= ((F_CPU/(2*a_BoudRate))-1);
 	}
 	/* First 8 bits from the BAUD_PRESCALE inside UBRRL and last 4 bits in UBRRH*/
 	UBRRL=a_BoudRate;

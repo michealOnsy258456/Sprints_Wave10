@@ -1,0 +1,20 @@
+/*
+ * APP.h
+ *
+ *  Created on: Jan 24, 2022
+ *      Author: Micheal-Onsy
+ */
+
+#ifndef APP_APP_H_
+#define APP_APP_H_
+
+#include "../MCAL/UART/UART.h"
+
+
+/*******************************************************************************
+ *                             Functions Prototypes                            *
+ *******************************************************************************/void APP_Init(void);
+void APP_Update(void);
+
+
+#endif /* APP_APP_H_ */

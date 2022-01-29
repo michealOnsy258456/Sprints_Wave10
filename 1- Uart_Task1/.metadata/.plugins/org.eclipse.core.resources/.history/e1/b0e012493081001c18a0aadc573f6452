@@ -1,0 +1,23 @@
+/*
+ * APP.c
+ *
+ *  Created on: Jan 24, 2022
+ *      Author: Micheal-Onsy
+ */
+#include "APP.h"
+/*GLOBAL STATIC VARIABLE
+----------------------------*/
+uint8_t gu8_ReceiverBuffer[20];
+
+
+void AppInit(void)
+{
+	UART_Config config={UART_1StopBit,UART_8Bit,UART_AsyncDouble,UART_Disable};// configuration of UART driver
+	UART_VidInit(&config,9600); // initialize UART driver
+}
+void AppUpdate(void)
+{
+	UART_receiveString(gu8_ReceiverBuffer); // Receive data from Uart
+	UART_sendString(gu8_ReceiverBuffer);    // Sent data from Uart
+	UART_sendByte('\r');   				    // sent newline 
+}

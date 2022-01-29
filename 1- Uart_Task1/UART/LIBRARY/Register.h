@@ -1,12 +1,17 @@
-/*
- * Register.h
+/******************************************************************************
  *
- *  Created on: Jan 19, 2022
- *      Author: Micheal-Onsy
- */
-
+ * [MODULE]: Register
+ *
+ * [FILE NAME]: Register.h
+ *
+ * [DESCRIPTION]: Header file for the Register
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
 #ifndef LIBRARY_REGISTER_H_
 #define LIBRARY_REGISTER_H_
+
 #define SREG_REG		(*((volatile uint8_t*) (0x5F)))
 #define SPH_REG		    (*((volatile uint8_t*) (0x5E)))
 #define SPL_REG			(*((volatile uint8_t*) (0x5D)))

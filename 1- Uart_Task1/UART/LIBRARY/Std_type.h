@@ -7,6 +7,7 @@
 
 #ifndef LIBRARY_STD_TYPE_H_
 #define LIBRARY_STD_TYPE_H_
+
 #include <avr/delay.h>
 
 /*- PRIMITIVE TYPES ----------------------------------------*/

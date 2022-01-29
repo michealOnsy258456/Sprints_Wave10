@@ -1,21 +1,42 @@
-/*
- * APP.h
+/******************************************************************************
  *
- *  Created on: Jan 24, 2022
- *      Author: Micheal-Onsy
- */
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.h
+ *
+ * [DESCRIPTION]: Header file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
 
 #ifndef APP_APP_H_
 #define APP_APP_H_
 
-#include "UART.h"
+/*******************************************************************************
+ *                              INCLUDES                                       *
+ *******************************************************************************/
+#include "../MCAL/UART/UART.h"
 
 
+/*******************************************************************************
+ *                             Functions Prototypes                            *
+ *******************************************************************************/
 
-uint8_t AppInit(void);
-uint8_t AppUpdate(void);
-
-
+/*******************************************************************************
+ * [Function Name]: App_init
+ *
+ * [Description]: 	Function to Initialize the application
+ *
+ *******************************************************************************/
+void APP_Init(void);
+/*******************************************************************************
+ * [Function Name]: App_Update
+ *
+ * [Description]: 	Function to update the state of the application
+ *
+ *******************************************************************************/
+void APP_Update(void);
 
 
 #endif /* APP_APP_H_ */

@@ -1,15 +1,20 @@
-/*
- * UART.h
+/******************************************************************************
  *
- *  Created on: Jan 14, 2020
- *      Author: micheal_onsy
- */
+ * [MODULE]: UART
+ *
+ * [FILE NAME]: UART.h
+ *
+ * [DESCRIPTION]: Header file for the UART
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
 
 #ifndef UART_H_
 #define UART_H_
-#include "Std_type.h"
-#include "common_macros.h"
-#include "Register.h"
+#include "../../LIBRARY/Std_type.h"
+#include "../../LIBRARY/common_macros.h"
+#include "../../LIBRARY/Register.h"
 
 
 //stop bit
