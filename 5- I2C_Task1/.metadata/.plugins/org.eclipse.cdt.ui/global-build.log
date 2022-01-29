@@ -202,3 +202,589 @@ Data:          3 bytes (0.1% Full)
 
 Finished building: sizedummy
  
+22:17:39 **** Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/I2C/i2c.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/I2C/i2c.d" -MT"MCAL/I2C/i2c.o" -c -o "MCAL/I2C/i2c.o" "../MCAL/I2C/i2c.c"
+In file included from ../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../MCAL/I2C/i2c.h:18,
+                 from ../MCAL/I2C/i2c.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../MCAL/I2C/i2c.h:18,
+                 from ../MCAL/I2C/i2c.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/I2C/i2c.c
+ 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:11:26: error: common_macros.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12:21: error: Std_type.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_EnableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: implicit declaration of function 'SET_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: invalid type argument of 'unary *' (have 'int')
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_DisableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: implicit declaration of function 'CLEAR_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: invalid type argument of 'unary *' (have 'int')
+make: *** [MCAL/GLOBAL_INTERRUPT/globalInterrupt.o] Error 1
+22:17:40 **** Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/I2C/i2c.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/I2C/i2c.d" -MT"MCAL/I2C/i2c.o" -c -o "MCAL/I2C/i2c.o" "../MCAL/I2C/i2c.c"
+In file included from ../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../MCAL/I2C/i2c.h:18,
+                 from ../MCAL/I2C/i2c.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../MCAL/I2C/i2c.h:18,
+                 from ../MCAL/I2C/i2c.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/I2C/i2c.c
+ 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:11:26: error: common_macros.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12:21: error: Std_type.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_EnableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: implicit declaration of function 'SET_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: invalid type argument of 'unary *' (have 'int')
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_DisableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: implicit declaration of function 'CLEAR_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: invalid type argument of 'unary *' (have 'int')
+make: *** [MCAL/GLOBAL_INTERRUPT/globalInterrupt.o] Error 1
+22:24:48 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:11:26: error: common_macros.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12:21: error: Std_type.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_EnableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: implicit declaration of function 'SET_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: invalid type argument of 'unary *' (have 'int')
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_DisableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: implicit declaration of function 'CLEAR_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: invalid type argument of 'unary *' (have 'int')
+make: *** [MCAL/GLOBAL_INTERRUPT/globalInterrupt.o] Error 1
+22:24:49 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:11:26: error: common_macros.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12:21: error: Std_type.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_EnableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: implicit declaration of function 'SET_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: invalid type argument of 'unary *' (have 'int')
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_DisableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: implicit declaration of function 'CLEAR_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: invalid type argument of 'unary *' (have 'int')
+make: *** [MCAL/GLOBAL_INTERRUPT/globalInterrupt.o] Error 1
+22:28:58 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:11:26: error: common_macros.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12:21: error: Std_type.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_EnableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: implicit declaration of function 'SET_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: invalid type argument of 'unary *' (have 'int')
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_DisableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: implicit declaration of function 'CLEAR_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: invalid type argument of 'unary *' (have 'int')
+make: *** [MCAL/GLOBAL_INTERRUPT/globalInterrupt.o] Error 1
+22:28:58 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+ 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/DIO.c:13:
+../MCAL/DIO/DIO.h:20:22: error: Register.h: No such file or directory
+../MCAL/DIO/DIO.h:21:27: error: common_macros.h: No such file or directory
+../MCAL/DIO/DIO.h:22:22: error: Std_type.h: No such file or directory
+In file included from ../MCAL/DIO/DIO.c:13:
+../MCAL/DIO/DIO.h:73: error: expected ')' before 'PORTID'
+../MCAL/DIO/DIO.h:74: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:75: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:76: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:77: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:78: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:79: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:80: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:15: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:43: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:105: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:130: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:194: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:229: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:272: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:304: error: expected ')' before 'PortID'
+make: *** [MCAL/DIO/DIO.o] Error 1
+22:29:18 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:11:26: error: common_macros.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12:21: error: Std_type.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_EnableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: implicit declaration of function 'SET_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: invalid type argument of 'unary *' (have 'int')
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_DisableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: implicit declaration of function 'CLEAR_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: invalid type argument of 'unary *' (have 'int')
+make: *** [MCAL/GLOBAL_INTERRUPT/globalInterrupt.o] Error 1
+22:29:19 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:22,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:22,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/DIO/DIO.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../APP/APP.c: In function 'APP_Init':
+../APP/APP.c:31: error: 'TWI_ISR' undeclared (first use in this function)
+../APP/APP.c:31: error: (Each undeclared identifier is reported only once
+../APP/APP.c:31: error: for each function it appears in.)
+make: *** [APP/APP.o] Error 1
+22:30:13 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:11:26: error: common_macros.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12:21: error: Std_type.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_EnableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: implicit declaration of function 'SET_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: invalid type argument of 'unary *' (have 'int')
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_DisableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: implicit declaration of function 'CLEAR_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: invalid type argument of 'unary *' (have 'int')
+make: *** [MCAL/GLOBAL_INTERRUPT/globalInterrupt.o] Error 1
+22:30:13 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:24: warning: implicit declaration of function 'APP_Init'
+../main.c:28: warning: implicit declaration of function 'APP_Update'
+Finished building: ../main.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./MCAL/I2C/i2c.o  ./MCAL/GLOBAL_INTERRUPT/globalInterrupt.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+./main.o: In function `main':
+../main.c:28: undefined reference to `APP_Update'
+make: *** [MC2.elf] Error 1
+22:30:57 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:11:26: error: common_macros.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12:21: error: Std_type.h: No such file or directory
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_EnableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: implicit declaration of function 'SET_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:15: error: invalid type argument of 'unary *' (have 'int')
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c: In function 'GI_DisableGI':
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: implicit declaration of function 'CLEAR_BIT'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: expected ')' before 'uint8_t'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: warning: type defaults to 'int' in declaration of 'type name'
+../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:21: error: invalid type argument of 'unary *' (have 'int')
+make: *** [MCAL/GLOBAL_INTERRUPT/globalInterrupt.o] Error 1
+22:30:58 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./MCAL/I2C/i2c.o  ./MCAL/GLOBAL_INTERRUPT/globalInterrupt.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+./main.o: In function `main':
+../main.c:28: undefined reference to `APP_Update'
+make: *** [MC2.elf] Error 1
+22:31:51 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GLOBAL_INTERRUPT/globalInterrupt.d" -MT"MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" -c -o "MCAL/GLOBAL_INTERRUPT/globalInterrupt.o" "../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c"
+In file included from ../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/GLOBAL_INTERRUPT/globalInterrupt.c
+ 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/DIO.c:13:
+../MCAL/DIO/DIO.h:20:22: error: Register.h: No such file or directory
+../MCAL/DIO/DIO.h:21:27: error: common_macros.h: No such file or directory
+../MCAL/DIO/DIO.h:22:22: error: Std_type.h: No such file or directory
+In file included from ../MCAL/DIO/DIO.c:13:
+../MCAL/DIO/DIO.h:73: error: expected ')' before 'PORTID'
+../MCAL/DIO/DIO.h:74: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:75: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:76: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:77: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:78: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:79: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.h:80: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:15: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:43: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:105: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:130: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:194: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:229: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:272: error: expected ')' before 'PortID'
+../MCAL/DIO/DIO.c:304: error: expected ')' before 'PortID'
+make: *** [MCAL/DIO/DIO.o] Error 1
+22:31:52 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./MCAL/I2C/i2c.o  ./MCAL/GLOBAL_INTERRUPT/globalInterrupt.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+./main.o: In function `main':
+../main.c:28: undefined reference to `APP_Update'
+make: *** [MC2.elf] Error 1
+22:32:10 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Building file: ../MCAL/DIO/DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO.d" -MT"MCAL/DIO/DIO.o" -c -o "MCAL/DIO/DIO.o" "../MCAL/DIO/DIO.c"
+In file included from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:22,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../MCAL/DIO/../../LIBRARY/Std_type.h:11,
+                 from ../MCAL/DIO/DIO.h:22,
+                 from ../MCAL/DIO/DIO.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MCAL/DIO/DIO.c
+ 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../APP/../MCAL/I2C/i2c.h:18,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../APP/../MCAL/I2C/i2c.h:18,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../APP/../MCAL/I2C/i2c.h:18,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/I2C/../../Library/Std_type.h:11,
+                 from ../APP/../MCAL/I2C/i2c.h:18,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: MC1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC1.map -mmcu=atmega32 -o "MC1.elf"  ./MCAL/I2C/i2c.o  ./MCAL/GLOBAL_INTERRUPT/globalInterrupt.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+Finished building target: MC1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC1.elf  >"MC1.lss"
+Finished building: MC1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3678 bytes (11.2% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:32:11 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./MCAL/I2C/i2c.o  ./MCAL/GLOBAL_INTERRUPT/globalInterrupt.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+./main.o: In function `main':
+../main.c:28: undefined reference to `APP_Update'
+make: *** [MC2.elf] Error 1
+22:32:29 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3678 bytes (11.2% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:32:29 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/APP.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./MCAL/I2C/i2c.o  ./MCAL/GLOBAL_INTERRUPT/globalInterrupt.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+./main.o: In function `main':
+../main.c:28: undefined reference to `APP_Update'
+make: *** [MC2.elf] Error 1
+22:32:44 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3678 bytes (11.2% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:32:45 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Building file: ../APP/APP.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/APP.d" -MT"APP/APP.o" -c -o "APP/APP.o" "../APP/APP.c"
+In file included from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/../../LIBRARY/Std_type.h:11,
+                 from ../APP/../MCAL/GLOBAL_INTERRUPT/globalInterrupt.h:12,
+                 from ../APP/APP.h:20,
+                 from ../APP/APP.c:16:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../APP/APP.c
+ 
+Building target: MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MC2.map -mmcu=atmega32 -o "MC2.elf"  ./MCAL/I2C/i2c.o  ./MCAL/GLOBAL_INTERRUPT/globalInterrupt.o  ./MCAL/DIO/DIO.o  ./APP/APP.o  ./main.o   
+Finished building target: MC2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MC2.elf  >"MC2.lss"
+Finished building: MC2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3724 bytes (11.4% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:32:49 **** Incremental Build of configuration Debug for project MC1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3678 bytes (11.2% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:32:50 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3724 bytes (11.4% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

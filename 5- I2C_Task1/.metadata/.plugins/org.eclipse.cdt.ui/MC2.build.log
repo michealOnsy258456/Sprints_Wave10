@@ -1,0 +1,20 @@
+22:32:50 **** Incremental Build of configuration Debug for project MC2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3724 bytes (11.4% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:32:50 Build Finished (took 274ms)
+

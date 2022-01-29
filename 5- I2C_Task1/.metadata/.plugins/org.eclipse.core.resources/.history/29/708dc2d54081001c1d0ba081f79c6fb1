@@ -1,0 +1,49 @@
+/******************************************************************************
+ *
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Micheal Onsy
+ *
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                              INCLUDES                                       *
+ *******************************************************************************/
+#include "APP.h"
+/*******************************************************************************
+ *                              Global Variables                               *
+ *******************************************************************************/
+uint8_t data='A';
+/*******************************************************************************
+ * [Function Name]: App_init
+ *
+ * [Description]: 	Function to Initialize the application
+ *
+ *******************************************************************************/
+void APP_Init(void){
+
+	TWI_Init();
+	TWI_EnableInterrupt();
+	TWI_SetCallback(&TWI_ISR);
+	DIO_setPortDirection(PORTa,DIO_u8_OUTPUT);
+	GI_EnableGI();
+}
+/*******************************************************************************
+ * [Function Name]: App_Update
+ *
+ * [Description]: 	Function to update the state of the application
+ *
+ *******************************************************************************/
+void App_Update(void){
+
+}
+void TWI_ISR(void)
+{
+	TWI_RecDataAck(&data);
+	DIO_writePortValue(PORTa,data);
+
+}
