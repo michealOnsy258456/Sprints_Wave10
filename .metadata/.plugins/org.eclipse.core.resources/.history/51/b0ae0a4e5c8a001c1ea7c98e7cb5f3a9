@@ -1,0 +1,71 @@
+ /******************************************************************************
+ *
+ * [MODULE]: APPLICATION
+ *
+ * [FILE NAME]: App.c
+ *
+ * [DESCRIPTION]: Source file for the Application
+ *
+ * [AUTHOR]: Ahmed Hassan
+ *
+ *******************************************************************************/
+
+#include "App.h"
+
+/*******************************************************************************
+ *                              Global Variables                               *
+ *******************************************************************************/
+
+uint8_t gu8_key;	/* Global variable to store the key value */
+
+/*******************************************************************************
+ *                           Functions Definitions                             *
+ *******************************************************************************/
+
+/*******************************************************************************
+ * [Function Name]: App_init
+ *
+ * [Description]: 	Function to Initialize the application to test keypad Driver
+ *
+ * [Args]:			None
+ *
+ * [in]			  	None
+ *
+ * [out]		  	None
+ *
+ * [in/out]		 	None
+ *
+ * [Returns]:       None
+ *******************************************************************************/
+void App_init(void)
+{
+	KEYPAD_Init();	/* KEYPAD Initialization */
+	DIO_setPortDirection(DIO_PORTC, OUTPUT);
+}
+
+/*******************************************************************************
+ * [Function Name]: App_Update
+ *
+ * [Description]: 	Function to update the state of the application
+ *
+ * [Args]:			None
+ *
+ * [in]			  	None
+ *
+ * [out]		  	None
+ *
+ * [in/out]		 	None
+ *
+ * [Returns]:       None
+ *******************************************************************************/
+void App_Update(void)
+{
+	/* If any switch pressed for more than 500 ms it counts only one press */
+
+	KEYPAD_getPressedKey(&gu8_key); /* get the pressed key number */
+
+	if((gu8_key <= 9) && (gu8_key >= 0))
+	{
+		DIO_writePort(DIO_PORTC, gu8_key);	/* display the pressed keypad switch */
+	}
+}

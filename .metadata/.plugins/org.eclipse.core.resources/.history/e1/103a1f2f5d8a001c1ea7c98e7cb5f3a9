@@ -1,0 +1,65 @@
+ /******************************************************************************
+ *
+ * [MODULE]: KEYPAD
+ *
+ * [FILE NAME]: keypad.h
+ *
+ * [DESCRIPTION]: Header file for the Keypad driver
+ *
+ * [AUTHOR]: Ahmed Hassan
+ *
+ *******************************************************************************/
+
+#ifndef KEYPAD_H_
+#define KEYPAD_H_
+
+#include "../../LIBRARY/Macros.h"
+#include "../../LIBRARY/std_types.h"
+#include "../../MCAL/DIO/dio.h"
+
+/*******************************************************************************
+ *                      Preprocessor Macros                                    *
+ *******************************************************************************/
+
+/* Keypad configurations for number of rows and columns */
+#define N_col 3
+#define N_row 4
+
+/* Keypad Port Configurations */
+#define KEYPAD_PORT		DIO_PORTA
+#define KEYPAD_PORT_IN  PINA
+#define KEYPAD_PORT_DIR DDRA
+
+#define PRESSED         (0u)
+#define NOT_PRESSED     (1u)
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+/*******************************************************************************
+* Service Name: KEYPAD_Init
+* Service ID[hex]: 0x10
+* Sync/Async: Synchronous
+* Reentrancy: Non reentrant
+* Parameters (in): void
+* Parameters (in/out): None
+* Parameters (out): None
+* Return value: Std_ReturnType
+* Description: Function to Initialize the KEYPAD module
+********************************************************************************/
+Std_ReturnType KEYPAD_Init(void);
+
+/*******************************************************************************
+* Service Name: KEYPAD_getPressedKey
+* Service ID[hex]: 0x20
+* Sync/Async: Synchronous
+* Reentrancy: reentrant
+* Parameters (in): void
+* Parameters (in/out): None
+* Parameters (out): None
+* Return value: Std_ReturnType
+* Description: Function responsible for getting the pressed keypad key
+********************************************************************************/
+Std_ReturnType KEYPAD_getPressedKey(uint8_t * au8_data);
+
+#endif /* KEYPAD_H_ */
