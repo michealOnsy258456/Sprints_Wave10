@@ -1,0 +1,13 @@
+/*
+ * main.c
+ *
+ *  Created on: Feb 22, 2022
+ *      Author: Micheal-Onsy
+ */
+
+
+int main (void)
+{
+
+	return (1) ;
+}

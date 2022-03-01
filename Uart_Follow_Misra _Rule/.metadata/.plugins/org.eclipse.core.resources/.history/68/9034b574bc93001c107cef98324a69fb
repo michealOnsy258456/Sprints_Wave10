@@ -1,0 +1,13 @@
+/*
+ * UART.h
+ *
+ *  Created on: Feb 22, 2022
+ *      Author: Micheal-Onsy
+ */
+
+#ifndef MCAL_UART_H_
+#define MCAL_UART_H_
+
+
+
+#endif /* MCAL_UART_H_ */
